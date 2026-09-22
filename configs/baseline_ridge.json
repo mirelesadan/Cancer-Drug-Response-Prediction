@@ -1,0 +1,21 @@
+{
+  "input_table": "data/processed/primary_responses.csv",
+  "target_transform": "none",
+  "split_source": "data/processed/cell_line_assignments.csv",
+  "pca_score_scaler": {
+    "type": "StandardScaler",
+    "fit_unit": "unique_training_cell_line",
+    "with_mean": true,
+    "with_std": true
+  },
+  "fingerprints": "binary_unscaled",
+  "alpha_grid": [0.01, 0.1, 1, 10, 100, 1000, 10000],
+  "alpha_selection": "minimum_overall_validation_rmse_tie_smallest_alpha",
+  "per_drug_ridge_alpha": "one_shared_alpha",
+  "ridge_solver": "centered_normal_equations_cholesky_positive_alpha",
+  "pooled_fingerprint_basis": "training_drug_fingerprint_row_space_svd_orthonormal_unpenalized_intercept",
+  "fingerprint_basis_relative_tolerance": 1e-12,
+  "minimum_within_drug_spearman_n": 3,
+  "fit_on": "train_only",
+  "report_on": ["train", "validation"]
+}

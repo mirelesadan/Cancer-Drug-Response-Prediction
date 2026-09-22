@@ -1,0 +1,63 @@
+{
+  "alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0
+  ],
+  "artifact_sha256": {
+    "data/processed/expression_pca128_scaled.npy": "014029aab651fb0c3ff6d89b29d8db6a15f4e293444dcc4878fc7d3b605aacc3",
+    "data/processed/pca_score_scaler.joblib": "53e2d2a2130d2b88f4cef78b92a2a2c77e5993f25d4ff38fb7409a08275aa556",
+    "results/baseline_alpha_search.csv": "000a0d76dfac6fa09d54f9d62e951920aa0388bf99c5fb52d179e0415c833b80",
+    "results/baseline_comparison.csv": "6210e15b24e02134712399d41b05da21d7e8553ebda13cedc06fb8db130c824b",
+    "results/baseline_validation_by_drug.csv": "84e27f38dde9fc6642eb9ec8581b687b335e3844b9a2e88ef23fe4bc0d57ff31",
+    "results/checkpoints/baseline_models.joblib": "11307778bd58d2980b13be6cb39ba9616f9a562f3186f2edda14eab8c12f2706",
+    "results/tmp/baseline_validation_predictions.csv": "97a3e96b1e8caf16f0ec37e5905f900ab8d8c590e2a82a7be520e5679959e2dd"
+  },
+  "checks": [
+    "frozen_preprocessing_hashes",
+    "cell_and_drug_alignment",
+    "training_drug_coverage",
+    "score_scaler_fit_on_unique_training_cells",
+    "positive_alpha_cholesky",
+    "fingerprint_basis_exact_on_training_drugs",
+    "validation_replay_after_model_reload",
+    "no_test_prediction_or_metric"
+  ],
+  "config_sha256": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+  "input_primary_sha256": "60d482a7b5d80c67d4869443896a7724fc03bf3614a51b632ff5d02e5cf7b357",
+  "pooled_fingerprint_basis_rank": 136,
+  "preprocessing_manifest_sha256": "6aacc45e746fc1bc9a89c1aed8349f8a16335c17fb26bb07453cba24f29850c2",
+  "runtime_context": {
+    "blas_threads_during_ridge": 1,
+    "cpu_count": 20,
+    "numpy": "1.26.4",
+    "python": "3.12.8",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.14.1"
+  },
+  "runtime_seconds": {
+    "metrics_and_tables": 0.2575724999769591,
+    "per_drug_mean": 0.0006233000312931836,
+    "per_drug_ridge_search": 0.1716434999834746,
+    "pooled_ridge_search": 0.6786808999604546,
+    "score_scaling": 0.020914599997922778,
+    "total": 1.4017187000135891
+  },
+  "scores_fit_unique_training_cells": 564,
+  "selected_alpha": {
+    "per_drug_ridge": 10.0,
+    "pooled_ridge": 10.0
+  },
+  "training_counts": {
+    "constant_target_drugs": [],
+    "drugs": 136,
+    "fallback_drugs": [],
+    "maximum": 563,
+    "median": 523.0,
+    "minimum": 33
+  }
+}

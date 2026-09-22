@@ -1,0 +1,14 @@
+{
+  "checked": [
+    "artifact_hashes",
+    "row_identity",
+    "saved_prediction_replay",
+    "overall_metrics",
+    "bootstrap_cluster_multiplicity",
+    "per_draw_seed_metric_average"
+  ],
+  "frozen_config_sha256": "fefe030f1fbe34ebab2349829f20737cb872005b04e13dbe48b5765273125e8e",
+  "primary_and_sensitivity_models_reloaded": 12,
+  "status": "passed",
+  "test_prediction_tolerance": 1e-06
+}

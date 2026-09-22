@@ -1,0 +1,5 @@
+# Python 3.12; direct packages needed for Milestone 2 only.
+numpy==1.26.4
+pandas==2.3.3
+rdkit==2023.9.6
+requests==2.34.2

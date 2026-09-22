@@ -1,0 +1,78 @@
+{
+  "artifacts_sha256": {
+    "cell_line_assignments.csv": "36d61a45149331c42eb53e2de611e2719a4633b10d698627928a8a4b96bb72a0",
+    "drugs.csv": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+    "expression_features.csv": "c8fc2a2c021df99e4484457af6065b4f542c255d937a9f5233c8b6bba1d4ad3b",
+    "expression_pca128.npy": "0be0f62daebf94b656a2b0d1b1b28a7760d0fb7d9b132217e24dab52bbb7a284",
+    "expression_raw.npy": "aa6b165ab9f7f8c9d0d72fff297f27d61851cc8ceb711e17d618cecbb3c2505d",
+    "expression_transform.joblib": "2dcbff2baecb4f851c0ec6972fd5e2b931d9aad50eb9c21df0892f0eeaad6474",
+    "morgan_radius2_2048.npy": "6a02b562369e655816a17d82e16d4e56630371118924d33bb782e20b0d5e2161",
+    "primary_responses.csv": "60d482a7b5d80c67d4869443896a7724fc03bf3614a51b632ff5d02e5cf7b357",
+    "sensitivity_responses.csv": "187ae97f357c4bcb253d2f04991230c3a1245a234d3cdd87d6b2688c4585d1a3",
+    "source_row_mapping.csv": "27f7a67a5fd2e6742fa412ea487c11cd59a781cae878d329975f1284f600aa63"
+  },
+  "config_sha256": "d3ae683ad75d81ec632c8e2fba7f66609f9e804f1465088e6ae1b229e460e803",
+  "counts": {
+    "duplicate_gene_symbol_positions": 317,
+    "primary_drugs": 136,
+    "primary_excluded_rows": 1474,
+    "primary_rows": 91229,
+    "primary_rows_by_split": {
+      "test": 13622,
+      "train": 63946,
+      "validation": 13661
+    },
+    "raw_rows": 92703,
+    "repeated_source_groups": 674,
+    "sensitivity_drugs": 137,
+    "sensitivity_pairs": 92029,
+    "sensitivity_pairs_by_split": {
+      "test": 13741,
+      "train": 64506,
+      "validation": 13782
+    },
+    "source_rows_in_repeated_groups": 1348,
+    "split_cell_lines": {
+      "test": 120,
+      "train": 564,
+      "validation": 121
+    },
+    "uprosertib_sensitivity_pairs": 800
+  },
+  "expression_preprocessing": {
+    "features_after_filter": 17737,
+    "fit_unique_training_cells": 564,
+    "original_features": 17737,
+    "pca_components": 128,
+    "retained_training_variance_fraction": 0.6530318215068318,
+    "train_cell_ids_sha256": "c2f197c7e206e4d97a45b7f82f00728219da2969a5a9d88a73670c336ff41ee3",
+    "zero_variance_removed": 0
+  },
+  "raw_sha256": {
+    "gdsc2.pkl": "0d09b9d69cc714fd2b4a31e2b1f602c09ed82c282533683c5fc734ceb226f9e5",
+    "gdsc_gene_symbols.tab": "5712acc83f8be3b03345cbd56f5ae3289582ef08caf6991b92eca1728eb73296"
+  },
+  "shapes": {
+    "expression_pca128": [
+      805,
+      128
+    ],
+    "expression_raw": [
+      805,
+      17737
+    ],
+    "morgan_radius2_2048": [
+      137,
+      2048
+    ]
+  },
+  "versions": {
+    "joblib": "1.6.0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "python": "3.12.8",
+    "rdkit": "2023.09.6",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.14.1"
+  }
+}

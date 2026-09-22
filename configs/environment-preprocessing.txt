@@ -1,0 +1,8 @@
+# Python 3.12; direct packages needed through Milestone 3.
+numpy==1.26.4
+pandas==2.3.3
+rdkit==2023.9.6
+requests==2.34.2
+scipy==1.14.1
+scikit-learn==1.9.1
+joblib==1.6.0

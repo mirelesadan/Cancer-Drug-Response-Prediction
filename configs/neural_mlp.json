@@ -1,0 +1,33 @@
+{
+  "input_table": "data/processed/primary_responses.csv",
+  "split_source": "data/processed/cell_line_assignments.csv",
+  "expression_features": "data/processed/expression_pca128_scaled.npy",
+  "drug_features": "data/processed/morgan_radius2_2048.npy",
+  "target_transform": "none",
+  "input_dim": 2176,
+  "hidden_layers": [256, 128],
+  "activation": "ReLU",
+  "dropout_after_each_hidden_activation": 0.1,
+  "output": "unrestricted_linear_scalar",
+  "loss": "MSE",
+  "optimizer": "AdamW",
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "evaluation_batch_size": 4096,
+  "learning_rates": [0.001, 0.0003],
+  "seeds": [17, 29, 43],
+  "maximum_epochs": 100,
+  "early_stopping_patience": 10,
+  "early_stopping_metric": "validation_RMSE_strict_improvement",
+  "learning_rate_selection": "lowest_mean_best_checkpoint_validation_RMSE_across_three_seeds",
+  "minimum_within_drug_spearman_n": 3,
+  "dtype": "float32",
+  "determinism": {
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "dataloader_workers": 0
+  }
+}

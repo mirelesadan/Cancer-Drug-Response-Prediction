@@ -1,0 +1,75 @@
+{
+  "frozen_on": "2026-09-21",
+  "state": "locked_before_test_outcomes",
+  "question": "known-drug response in previously unseen cell lines",
+  "target": "dataset_provided_Y_unchanged",
+  "no_training_plus_validation_refit": true,
+  "no_further_tuning_or_architectures": true,
+  "primary_models_must_remain_unchanged": true,
+  "frozen_inputs_sha256": {
+    "results/preprocessing_manifest.json": "6aacc45e746fc1bc9a89c1aed8349f8a16335c17fb26bb07453cba24f29850c2",
+    "results/baseline_validation_manifest.json": "afbd1f19f2ec731778184020e526e14591d2fcb772c1bd00e21f068d0a840224",
+    "results/neural_validation_manifest.json": "c400f2643d7ed91dcf211c7458ef7fc675da7b891737c092ee34df3adb029cd4",
+    "data/processed/primary_responses.csv": "60d482a7b5d80c67d4869443896a7724fc03bf3614a51b632ff5d02e5cf7b357",
+    "data/processed/sensitivity_responses.csv": "187ae97f357c4bcb253d2f04991230c3a1245a234d3cdd87d6b2688c4585d1a3",
+    "data/processed/source_row_mapping.csv": "27f7a67a5fd2e6742fa412ea487c11cd59a781cae878d329975f1284f600aa63",
+    "data/processed/cell_line_assignments.csv": "36d61a45149331c42eb53e2de611e2719a4633b10d698627928a8a4b96bb72a0",
+    "data/processed/expression_pca128_scaled.npy": "014029aab651fb0c3ff6d89b29d8db6a15f4e293444dcc4878fc7d3b605aacc3",
+    "data/processed/pca_score_scaler.joblib": "53e2d2a2130d2b88f4cef78b92a2a2c77e5993f25d4ff38fb7409a08275aa556",
+    "data/processed/morgan_radius2_2048.npy": "6a02b562369e655816a17d82e16d4e56630371118924d33bb782e20b0d5e2161",
+    "configs/baseline_ridge.json": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+    "configs/neural_mlp.json": "abac111e1c91404c1f3ef63821fa4ea2c8102640526ebb092a1c58be424cddf4"
+  },
+  "primary_model_artifacts_sha256": {
+    "results/checkpoints/baseline_models.joblib": "11307778bd58d2980b13be6cb39ba9616f9a562f3186f2edda14eab8c12f2706",
+    "results/checkpoints/mlp_lr_3e-04_seed_17.pt": "7d961ce7ceda9e85811ebc54a692fa62feb2da818c99ba394ab91de65cf5860a",
+    "results/checkpoints/mlp_lr_3e-04_seed_29.pt": "f9ed6fe2a436179745e1129a3909424d5594fa1529099a8fcc03ba652960570e",
+    "results/checkpoints/mlp_lr_3e-04_seed_43.pt": "c8470e59b8b0f48970315810aa0714fbd0f57daef49e3a649defc7e0e34f8954"
+  },
+  "primary_models": {
+    "validation_selected_model": "per_drug_ridge",
+    "comparison_models": ["per_drug_mean", "pooled_ridge", "mlp_seed_17", "mlp_seed_29", "mlp_seed_43"],
+    "pooled_ridge_alpha": 10,
+    "per_drug_ridge_alpha": 10,
+    "mlp_learning_rate": 0.0003,
+    "mlp_selected_runs": {
+      "17": {"run_id": "lr_3e-04_seed_17", "best_epoch": 3},
+      "29": {"run_id": "lr_3e-04_seed_29", "best_epoch": 4},
+      "43": {"run_id": "lr_3e-04_seed_43", "best_epoch": 4}
+    },
+    "mlp_seed_policy": "report_all_three_individually_and_mean_metrics_without_prediction_ensemble"
+  },
+  "sensitivity_protocol": {
+    "table": "existing_mean_aggregated_sensitivity_responses",
+    "uprosertib_averaging": "analytical_assumption_after_identical_feature_verification_not_established_correction",
+    "split": "same_frozen_cell_line_assignments",
+    "transforms": "reuse_existing_expression_PCA_score_scaler_and_binary_fingerprints_without_refitting",
+    "baseline_fits": "fit_on_sensitivity_training_rows_only_with_same_ridge_alphas_no_retuning",
+    "mlp_fits": "from_scratch_lr_0.0003_seeds_17_29_43_fixed_epochs_3_4_4_no_early_stopping_selection",
+    "comparison": "align_identical_non_Uprosertib_source_pairs_for_validation_and_test_then_report_Uprosertib_separately",
+    "independent_model_check": "per_drug_mean_and_per_drug_ridge_common_pair_predictions_unchanged_within_numerical_tolerance",
+    "primary_exclusion_unchanged": true
+  },
+  "test_metrics": {
+    "primary": "response_weighted_RMSE_MAE_equal_drug_mean_RMSE_median_defined_within_drug_Spearman",
+    "within_drug_spearman": "minimum_3_rows_and_nonconstant_Y_and_predictions_else_undefined_not_zero",
+    "report_drug_counts_and_undefined_status": true,
+    "mlp_summary": "mean_and_sample_SD_of_three_seed_specific_metrics_no_prediction_ensemble",
+    "bi_2536": "zero_test_rows_no_drug_specific_test_metric",
+    "sensitivity": "same_common_non_Uprosertib_pairs_as_primary_separately_from_Uprosertib_pairs_no_mixed_pool_comparison"
+  },
+  "bootstrap": {
+    "scope": "primary_test_rows",
+    "resamples": 2000,
+    "seed": 2026,
+    "sampling_unit": "whole_unique_test_cell_lines_with_replacement_same_draws_for_all_models",
+    "cluster_multiplicity": "each_selected_cell_line_repeats_all_its_response_rows_as_many_times_as_drawn",
+    "interval": "2.5_and_97.5_percentile_of_bootstrap_metric_distribution",
+    "metrics": ["overall_RMSE", "overall_MAE", "paired_RMSE_difference_vs_per_drug_ridge"],
+    "difference_sign": "other_model_minus_per_drug_ridge_positive_means_other_worse",
+    "mlp_summary_per_draw": "arithmetic_mean_of_three_seed_specific_RMSE_or_MAE_values_not_prediction_averaging",
+    "interpretation": "conditional_on_fitted_models_and_this_cell_line_split_not_retraining_or_unseen_drug_uncertainty"
+  },
+  "figures": ["test_performance_with_cluster_bootstrap_intervals", "drug_level_error_comparison", "MLP_learning_curves"],
+  "row_level_predictions_and_models_git_ignored": true
+}

@@ -1,0 +1,40 @@
+{
+  "input_sha256": {
+    "gdsc2.pkl": "0d09b9d69cc714fd2b4a31e2b1f602c09ed82c282533683c5fc734ceb226f9e5",
+    "gdsc_gene_symbols.tab": "5712acc83f8be3b03345cbd56f5ae3289582ef08caf6991b92eca1728eb73296"
+  },
+  "primary_excluded_drug": "Uprosertib",
+  "sensitivity_duplicate_rule": "arithmetic_mean_of_Y_after_identical_X1_X2_verification",
+  "target_transform": "none",
+  "split": {
+    "seed": 17,
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15,
+    "algorithm": "sort_unique_cell_ids_then_numpy_default_rng_permutation_round_train_and_validation_counts"
+  },
+  "expression": {
+    "feature_id_prefix": "expr_",
+    "variance_threshold": 0.0,
+    "scaler_with_mean": true,
+    "scaler_with_std": true,
+    "pca_components": 128,
+    "pca_solver": "randomized",
+    "pca_random_state": 17,
+    "pca_n_oversamples": 10,
+    "pca_iterated_power": 3,
+    "pca_power_iteration_normalizer": "QR",
+    "pca_whiten": false
+  },
+  "fingerprint": {
+    "type": "Morgan_bit_vector",
+    "radius": 2,
+    "n_bits": 2048,
+    "count_simulation": false,
+    "include_chirality": true,
+    "use_bond_types": true,
+    "only_nonzero_invariants": false,
+    "include_ring_membership": true,
+    "include_redundant_environments": false
+  }
+}

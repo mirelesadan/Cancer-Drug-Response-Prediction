@@ -1,0 +1,5 @@
+# Python 3.12 on Windows. The official PyTorch CUDA 12.8 index supplies the
+# GPU-enabled wheel; torchvision/torchaudio are unnecessary for this project.
+-r environment-preprocessing.txt
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128

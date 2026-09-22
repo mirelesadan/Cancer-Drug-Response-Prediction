@@ -1,0 +1,15 @@
+# Python 3.12.8 on Windows 11; captured after Milestone 2 (2026-09-21).
+certifi==2026.7.22
+charset-normalizer==3.5.1
+idna==3.20
+numpy==1.26.4
+pandas==2.3.3
+pillow==12.3.0
+python-dateutil==2.9.0.post0
+pytz==2026.3.post1
+rdkit==2023.9.6
+requests==2.34.2
+setuptools==80.10.2
+six==1.17.0
+tzdata==2026.4
+urllib3==2.8.0

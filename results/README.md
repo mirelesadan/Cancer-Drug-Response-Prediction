@@ -1,0 +1,1 @@
+The [final evaluation](final_evaluation.md) summarizes the locked test comparison, uncertainty, sensitivity analysis, and limitations. The CSV tables contain aggregate metrics, and `figures/` contains three presentation figures. Manifests record configuration and artifact hashes. Checkpoints, row-level predictions, and per-draw bootstrap arrays remain local and Git-ignored.

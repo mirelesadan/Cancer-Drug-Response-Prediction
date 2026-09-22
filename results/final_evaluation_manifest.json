@@ -1,0 +1,34 @@
+{
+  "artifact_sha256": {
+    "results/figures/drug_level_errors.png": "a0fd37b2526a85c62dfbc66a34da81164d28f0b5a84a626f2d04b53ce6ec3d6b",
+    "results/figures/mlp_learning_curves.png": "ce9442b88c11aeb2603fe0dad125bf3abd95097957685c51e76fc628a0b8710e",
+    "results/figures/test_performance.png": "be42209a7852ace547413c61b209bc748a02c97aff452f9a02f50006ae3dd865",
+    "results/final_bootstrap_intervals.csv": "d071c1861e6132fedce249109f0b2dcc950a2995314fff595694f5e894a8a751",
+    "results/final_sensitivity_comparison.csv": "e291096eb9a31fbd05fd626da60f7ef4410df758a2701bfb956cbb55900a893b",
+    "results/final_test_by_drug.csv": "5fc16866b57ad3b128d411bd2634137a802bfc35aec786866209248e80bfacf4",
+    "results/final_test_comparison.csv": "a416c8f0515bb4761c522b38413eb7c72200ddf9a90429492176e8e086c29d24",
+    "results/tmp/final_bootstrap_replicates.npz": "64b2a63557624dd02b21370f05a108e390751e50d0509731d13e94a6265970fd",
+    "results/tmp/primary_test_predictions.csv": "14cada0b5369a7a8072347ffbdb0db76c5272a35640e3103780ae2811e10aa0e",
+    "results/tmp/sensitivity_test_predictions.csv": "56db36bcb932fb4daa6531d1bd40be2a3fb640927279c9ea0a1414b78a475551"
+  },
+  "bi_2536_test_rows": 0,
+  "checks": [
+    "frozen_hashes",
+    "test_identifier_alignment",
+    "same_common_test_pairs",
+    "checkpoint_identity",
+    "independent_model_common_prediction_invariance",
+    "finite_predictions",
+    "per_drug_count_sum",
+    "cell_cluster_bootstrap_multiplicity",
+    "same_bootstrap_draws_for_all_models"
+  ],
+  "device": "cuda",
+  "final_config_sha256": "fefe030f1fbe34ebab2349829f20737cb872005b04e13dbe48b5765273125e8e",
+  "primary_test_rows": 13622,
+  "runtime_seconds": 9.930892599979416,
+  "sensitivity_common_test_rows": 13622,
+  "sensitivity_manifest_sha256": "a60f4a0821ec70b614e038bcac5773c1414c2d6afeacd0315f9e76b66d9a77a0",
+  "sensitivity_uprosertib_test_pairs": 119,
+  "test_cell_lines": 120
+}

@@ -1,0 +1,196 @@
+{
+  "input": {
+    "data": "data\\raw\\gdsc2.pkl",
+    "genes": "data\\raw\\gdsc_gene_symbols.tab"
+  },
+  "schema": {
+    "rows": 92703,
+    "columns": [
+      "ID1",
+      "ID2",
+      "X1",
+      "X2",
+      "Y"
+    ],
+    "dtypes": {
+      "ID1": "object",
+      "ID2": "object",
+      "X1": "object",
+      "X2": "object",
+      "Y": "float64"
+    }
+  },
+  "identities": {
+    "unique_drugs": 137,
+    "unique_cell_lines": 805,
+    "unique_smiles": 137
+  },
+  "missing_by_column": {
+    "X2": 0,
+    "X1": 0,
+    "ID2": 0,
+    "ID1": 0,
+    "Y": 0
+  },
+  "nonfinite_y": 0,
+  "response": {
+    "count": 92703,
+    "min": -8.60856,
+    "p01": -5.53917858,
+    "p25": 1.3927165000000001,
+    "median": 3.106577,
+    "p75": 4.573345,
+    "p99": 7.160890299999999,
+    "max": 10.036351,
+    "mean": 2.6445833994584858,
+    "std": 2.7208723648977995
+  },
+  "rows_per_drug": {
+    "count": 137,
+    "min": 43.0,
+    "p01": 45.36,
+    "p25": 726.0,
+    "median": 748.0,
+    "p75": 754.0,
+    "p99": 803.28,
+    "max": 1474.0,
+    "mean": 676.6642335766423,
+    "std": 231.35747986777642
+  },
+  "rows_per_cell_line": {
+    "count": 805,
+    "min": 13.0,
+    "p01": 52.0,
+    "p25": 122.0,
+    "median": 122.0,
+    "p75": 123.0,
+    "p99": 137.0,
+    "max": 137.0,
+    "mean": 115.15900621118013,
+    "std": 20.02888608031212
+  },
+  "least_measured_drugs": [
+    [
+      "BI-2536",
+      43
+    ],
+    [
+      "SB505124",
+      45
+    ],
+    [
+      "Doramapimod",
+      46
+    ],
+    [
+      "Ribociclib",
+      46
+    ],
+    [
+      "AZD6482",
+      47
+    ]
+  ],
+  "most_measured_drugs": [
+    [
+      "Uprosertib",
+      1474
+    ],
+    [
+      "Camptothecin",
+      804
+    ],
+    [
+      "5-Fluorouracil",
+      802
+    ],
+    [
+      "Afatinib",
+      801
+    ],
+    [
+      "Alpelisib",
+      801
+    ]
+  ],
+  "unique_cell_lines_per_drug": {
+    "count": 137,
+    "min": 43.0,
+    "p01": 45.36,
+    "p25": 726.0,
+    "median": 748.0,
+    "p75": 754.0,
+    "p99": 801.64,
+    "max": 804.0,
+    "mean": 671.7445255474453,
+    "std": 221.22197493484845
+  },
+  "drug_mapping": {
+    "drugs_with_multiple_smiles": {},
+    "smiles_shared_by_multiple_drug_names": {},
+    "canonical_structures_shared_by_multiple_drug_names": {},
+    "invalid_smiles": []
+  },
+  "expression": {
+    "unique_python_objects": 805,
+    "shapes": {
+      "(17737,)": 805
+    },
+    "dtypes": {
+      "float64": 805
+    },
+    "bad_objects": 0,
+    "nonfinite_entries_in_unique_objects": 0,
+    "objects_with_nonfinite": 0,
+    "cells_with_multiple_expression_objects": {},
+    "expression_objects_shared_by_multiple_cells": 0,
+    "identical_expression_values_shared_by_multiple_cells": 0
+  },
+  "genes": {
+    "table_rows": 17737,
+    "columns": [
+      "GENE_SYMBOLS"
+    ],
+    "blank_symbols": 0,
+    "duplicated_symbols": 317,
+    "length_matches_all_expression_objects": true
+  },
+  "duplicate_measurements": {
+    "unique_drug_cell_pairs": 92029,
+    "extra_rows_beyond_unique_pairs": 674,
+    "pairs_with_repeated_rows": 674,
+    "pairs_with_conflicting_y": 674,
+    "exact_duplicate_key_and_y_rows": 0,
+    "conflicting_pair_y_range": {
+      "count": 674,
+      "min": 0.002705999999999875,
+      "p01": 0.011899020000000204,
+      "p25": 0.3173635,
+      "median": 0.6974010000000002,
+      "p75": 1.2000024999999996,
+      "p99": 2.9935264999999966,
+      "max": 5.712766,
+      "mean": 0.8488164673590505,
+      "std": 0.7001864877026072
+    },
+    "drugs_with_repeated_pairs": 1,
+    "most_repeated_drugs": [
+      [
+        "Uprosertib",
+        674
+      ]
+    ]
+  },
+  "split_feasibility": {
+    "trial_train_fraction_of_cells": 0.7,
+    "independent_trial_draws": 100,
+    "trial_seed": 20260921,
+    "all_drugs_covered_in_train_trial_count": 100,
+    "all_drugs_covered_in_all_partitions_trial_count": 100,
+    "most_often_uncovered_in_train": [],
+    "most_often_uncovered_in_validation": [],
+    "most_often_uncovered_in_test": [],
+    "minimum_cell_lines_for_any_drug": 43,
+    "note": "Feasibility diagnostic only; no train, validation, or test split is selected or saved."
+  }
+}

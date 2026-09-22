@@ -1,0 +1,65 @@
+{
+  "artifact_sha256": {
+    "results/checkpoints/mlp_lr_1e-03_seed_17.pt": "695f3885ea0ac3bd405d0b75c759674ac7c3e9ac761c1c4a3c21bf286a358a6f",
+    "results/checkpoints/mlp_lr_1e-03_seed_29.pt": "31a7faef20b1c93d8db911e97b1c1e0324d16d64f03c4387e33cdfb9acee529b",
+    "results/checkpoints/mlp_lr_1e-03_seed_43.pt": "5a35623ff64e5867b97c901f0b538c1735e9c734d2a80b0c1a9b45ce5b6f2b76",
+    "results/checkpoints/mlp_lr_3e-04_seed_17.pt": "7d961ce7ceda9e85811ebc54a692fa62feb2da818c99ba394ab91de65cf5860a",
+    "results/checkpoints/mlp_lr_3e-04_seed_29.pt": "f9ed6fe2a436179745e1129a3909424d5594fa1529099a8fcc03ba652960570e",
+    "results/checkpoints/mlp_lr_3e-04_seed_43.pt": "c8470e59b8b0f48970315810aa0714fbd0f57daef49e3a649defc7e0e34f8954",
+    "results/neural_runs.csv": "4cf66a010b459ea414540bb410aa5905a0a46315f4f8fbdd3f4c2a9eddb6fc99",
+    "results/neural_summary.csv": "5cfb398c06e3e313777b03c5c2baee2a871e05d51b7f72d58a221ea220429214",
+    "results/neural_validation_by_drug.csv": "b6b18abfc882f875349fb6e44b4281a14bb22636de0adfd2011e1d762bc6c0e1",
+    "results/tmp/neural_learning_curves.csv": "217d21efdd010456d64f0508d946d458e4cee380af7b7cb9fe1f09c0ea0bf239",
+    "results/tmp/neural_validation_predictions.csv": "750ba89f4749dfc55bd97d79ad676190ce022ca809fb0d6a7d4ab1e9b2d55576"
+  },
+  "baseline_manifest_sha256": "afbd1f19f2ec731778184020e526e14591d2fcb772c1bd00e21f068d0a840224",
+  "baseline_validation_rmse": {
+    "per_drug_mean": 1.5282611013990794,
+    "per_drug_ridge": 1.236708361738733,
+    "pooled_ridge": 1.3489450389432878
+  },
+  "checks": [
+    "frozen_input_hashes",
+    "row_alignment",
+    "finite_losses",
+    "smoke_device_and_shape",
+    "eval_mode_metrics",
+    "checkpoint_reload",
+    "selected_all_three_seeds",
+    "no_test_predictions"
+  ],
+  "config_sha256": "abac111e1c91404c1f3ef63821fa4ea2c8102640526ebb092a1c58be424cddf4",
+  "determinism": {
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "dataloader_workers": 0,
+    "deterministic_algorithms": true
+  },
+  "hardware": {
+    "cpu_count": 20,
+    "device": "cuda",
+    "driver": "610.88",
+    "gpu_memory_bytes": 8585216000,
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU"
+  },
+  "input_primary_sha256": "60d482a7b5d80c67d4869443896a7724fc03bf3614a51b632ff5d02e5cf7b357",
+  "runtime_seconds_total_including_smoke_and_artifacts": 232.30332000000635,
+  "selected_learning_rate": 0.0003,
+  "selected_run_ids": [
+    "lr_3e-04_seed_17",
+    "lr_3e-04_seed_29",
+    "lr_3e-04_seed_43"
+  ],
+  "selection_rule": "lowest_mean_best_checkpoint_validation_RMSE_across_three_seeds",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "python": "3.12.8",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.14.1",
+    "torch": "2.11.0+cu128",
+    "torch_cuda": "12.8"
+  }
+}

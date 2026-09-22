@@ -1,0 +1,39 @@
+# Local environments and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+PROJECT_PLAN.md
+/*.docx
+/*.pdf
+/application/
+/private/
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Retrieved datasets and derived row-level data
+/data/*
+!/data/README.md
+
+# Large or temporary experiment outputs
+/results/checkpoints/
+/results/tmp/
+*.pt
+*.pth
+*.ckpt
+*.joblib
+*.npy
+wandb/
+mlruns/
+
+# Platform/editor files
+.DS_Store
+Thumbs.db
+.vscode/

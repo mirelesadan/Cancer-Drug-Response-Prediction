@@ -1,0 +1,7 @@
+# Python 3.12 on Windows. Include the fixed CUDA-enabled PyTorch environment.
+# Matplotlib 3.11.2 and ContourPy 1.3.3 have CPython 3.12 Windows wheels;
+# keep NumPy at the version required by the audited SciPy environment.
+-r environment-neural.txt
+numpy==1.26.4
+matplotlib==3.11.2
+contourpy==1.3.3

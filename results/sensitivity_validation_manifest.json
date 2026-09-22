@@ -1,0 +1,45 @@
+{
+  "artifact_sha256": {
+    "results/checkpoints/sensitivity_baselines.joblib": "907a4250a90e211a7d7b7b4278ab4e605102018dc3ae0e62c3fd77e29aa499bd",
+    "results/checkpoints/sensitivity_mlp_seed_17.pt": "3adec8f02160c937f4e1690d5f3d622f34a85ea961026d5ed408a76a2b3b9588",
+    "results/checkpoints/sensitivity_mlp_seed_29.pt": "07aad3445f86fac971da5421f72d3ce7507487571c7fdd29ff12ba106378b494",
+    "results/checkpoints/sensitivity_mlp_seed_43.pt": "76752caf7e885a085d3a84f6f84642f8a7b917b7debadd490dbda3d9d04d6edd",
+    "results/sensitivity_validation_comparison.csv": "bd69cb139be98592769211f2d9397b7769ae347321c8f549b4a7cef8cbc4e541",
+    "results/tmp/sensitivity_validation_predictions.csv": "a643e813814e32dbd0fda85b7a78413db28dfd714785e4d36fca947d0793941f"
+  },
+  "checks": [
+    "frozen_hashes",
+    "training_only_fits",
+    "common_pair_alignment",
+    "independent_model_invariance",
+    "fixed_mlp_epochs",
+    "no_test_scoring"
+  ],
+  "common_validation_rows": 13661,
+  "device": "cuda",
+  "final_config_sha256": "fefe030f1fbe34ebab2349829f20737cb872005b04e13dbe48b5765273125e8e",
+  "mlp_fixed_epoch_runtime": {
+    "17": {
+      "checkpoint": "results/checkpoints/sensitivity_mlp_seed_17.pt",
+      "fixed_epochs": 3,
+      "seconds": 11.606781899987254
+    },
+    "29": {
+      "checkpoint": "results/checkpoints/sensitivity_mlp_seed_29.pt",
+      "fixed_epochs": 4,
+      "seconds": 9.499354399973527
+    },
+    "43": {
+      "checkpoint": "results/checkpoints/sensitivity_mlp_seed_43.pt",
+      "fixed_epochs": 4,
+      "seconds": 8.053235700004734
+    }
+  },
+  "primary_model_hashes_unchanged": true,
+  "runtime_seconds_total": 42.596774699981324,
+  "selected_alpha": 10.0,
+  "selected_learning_rate": 0.0003,
+  "training_rows": 64506,
+  "uprosertib_validation_rows": 121,
+  "validation_rows": 13782
+}
