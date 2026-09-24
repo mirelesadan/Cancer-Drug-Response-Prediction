@@ -1,0 +1,4 @@
+run_id,seed,best_epoch,last_epoch,early_stopped,hit_epoch_cap,train_rmse,train_mae,validation_rmse,validation_mae,runtime_seconds,checkpoint,validation_equal_drug_mean_rmse,validation_median_within_drug_spearman,spearman_eligible_drugs,spearman_defined_drugs
+gnn_seed_17,17,46,56,True,False,1.4871202401289496,1.119843068431823,1.6288116534373003,1.264261556384404,27.641008099992177,results/checkpoints/gnn_seed_17.pt,1.6182332375247592,0.48315419898341472,136,136
+gnn_seed_29,29,42,52,True,False,1.5278881529281201,1.15588058688914,1.6956841528305,1.323116464803141,20.052225999999791,results/checkpoints/gnn_seed_29.pt,1.6741346575176332,0.49672110118512491,136,136
+gnn_seed_43,43,61,71,True,False,1.3735305887264431,1.0467065250025884,1.6421746468506866,1.2906503168735397,25.525141399994027,results/checkpoints/gnn_seed_43.pt,1.6711409483237956,0.48387284583139267,136,136

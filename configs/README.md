@@ -1,3 +1,5 @@
 The `environment-*.txt` files record direct package recipes and full tested Windows/Python 3.12 locks for the audit, preprocessing, neural, and final-evaluation stages. `environment-final.txt` includes the CUDA-enabled PyTorch wheel used for the reported runs; see the root README for CPU setup guidance.
 
 `preprocessing.json` fixes Uprosertib handling, the seed-17 grouped split, and feature settings. `baseline_ridge.json` records the seven-alpha validation search; `neural_mlp.json` fixes the six MLP runs. `final_evaluation.json` freezes the original final comparison and SHA-256 identities of its inputs and checkpoints. That historical lock may reject artifacts regenerated in a different environment.
+
+The optional [GNN configuration](gnn_extension.json) fixes its molecular graph encoder and three-seed training protocol. [GNN environment files](environment-gnn.txt) extend the original tested setup with PyTorch Geometric core. The [GNN final lock](gnn_final_evaluation.json) records checkpoint and input identities plus its exploratory test procedure; the original test results were already public before this extension was chosen.

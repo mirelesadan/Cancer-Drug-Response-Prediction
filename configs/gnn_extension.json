@@ -1,0 +1,51 @@
+{
+  "study": "exploratory_molecular_gnn_extension",
+  "question": "known_drugs_unseen_cell_lines",
+  "input_table": "data/processed/primary_responses.csv",
+  "split": "existing_seed_17_cell_line_assignments",
+  "expression_features": "data/processed/expression_pca128_scaled.npy",
+  "drug_features": "RDKit_graphs_from_frozen_drugs_csv_no_morgan_input",
+  "graph_featurization": {
+    "hydrogens": "implicit_RDKit_molecule",
+    "atom": "one_hot_atomic_number_0_to_118_degree_0_to_6_plus_other_formal_charge_minus3_to3_plus_other_hybridization_7_plus_other_total_H_0_to4_plus_other_chirality_3_plus_other_and_binary_aromatic_ring",
+    "bond": "one_hot_single_double_triple_aromatic_plus_other_stereo_none_E_Z_any_plus_other_and_binary_conjugated_ring",
+    "edge_direction": "both_directions_per_bond",
+    "graph_order": "frozen_drugs_csv_drug_index"
+  },
+  "target_transform": "none",
+  "primary_excluded_drug": "Uprosertib",
+  "architecture": {
+    "graph_layers": 2,
+    "graph_operator": "GINEConv_with_edge_attributes",
+    "graph_hidden_dim": 64,
+    "graph_pool": "global_mean_pool",
+    "fusion_hidden_layers": [256, 128],
+    "activation": "ReLU",
+    "dropout": 0.1,
+    "output": "unrestricted_linear_scalar"
+  },
+  "training": {
+    "loss": "MSE",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_size": 2048,
+    "evaluation_batch_size": 8192,
+    "seeds": [17, 29, 43],
+    "maximum_epochs": 100,
+    "early_stopping_patience": 10,
+    "early_stopping_metric": "validation_RMSE_strict_improvement",
+    "selection": "retain_and_report_all_three_best_validation_checkpoints_no_seed_cherry_picking"
+  },
+  "metrics": ["overall_RMSE", "overall_MAE", "equal_drug_mean_RMSE", "median_defined_within_drug_Spearman"],
+  "minimum_within_drug_spearman_n": 3,
+  "determinism": {
+    "deterministic_algorithms": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "dataloader_workers": 0
+  },
+  "test_policy": "no_test_access_until_validation_runs_checks_and_separate_extension_lock"
+}

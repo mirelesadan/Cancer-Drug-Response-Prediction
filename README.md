@@ -29,6 +29,10 @@ Validation-selected **per-drug Ridge reduced test RMSE by 18.1% versus the per-d
 
 The figure shows uncertainty from **2,000 paired whole-cell-line bootstrap draws**, conditional on the fitted models and this split. It does not measure variation from retraining or new drugs. The [paired intervals](results/final_bootstrap_intervals.csv), [drug-level error figure](results/figures/drug_level_errors.png), and [MLP learning curves](results/figures/mlp_learning_curves.png) provide complementary views.
 
+## Exploratory molecular GNN extension
+
+An optional follow-up replaced the fixed Morgan fingerprint with an RDKit molecular graph encoder (two PyTorch Geometric GINE layers and global mean pooling), while retaining the same standardized expression PCA, primary data, and frozen cell-line assignment. Three fixed training seeds were run without a new architecture or learning-rate search. The GNN's three-seed **metric-mean** validation RMSE was **1.6556 ± 0.0354** sample SD, versus **1.2367** for per-drug Ridge; its exploratory test RMSE was **1.6641 ± 0.0435**, versus **1.2628** for unchanged per-drug Ridge on identical pairs. Thus this specific graph model did not improve the study's prediction accuracy. The original test results were already public before the GNN architecture was chosen, so this test comparison is exploratory rather than a fresh confirmatory evaluation. See the [GNN validation report](results/gnn_validation.md), [GNN final comparison](results/gnn_final.md), and [extension figure](results/figures/gnn_extension.png) for per-seed results, drug-level metrics, paired cell-line bootstrap intervals, checks, and limitations.
+
 ## Data access and terms
 
 No raw or processed dataset, row-level prediction, or fitted checkpoint is distributed here. `src/retrieve_gdsc2.py` downloads the two **TDC-identified Harvard Dataverse files** and verifies their MD5 hashes. The [data retrieval notes](data/README.md) and [audit](results/data_audit.md#environment-and-retrieval) record the file IDs, source URLs, retrieval date, SHA-256 hashes, and PyTDC loader compatibility issue. These files identify the TDC snapshot but do not resolve its exact upstream GDSC release or row-level mapping.
@@ -51,6 +55,8 @@ Run from the repository root with **Python 3.12**. Create `.venv` using your pre
 ```
 
 The version check should report Python 3.12. On macOS/Linux, replace the executable with `.venv/bin/python` and use equivalent shell syntax. Model scripts are [`run_baselines.py`](src/run_baselines.py), [`run_neural.py`](src/run_neural.py) (`--smoke-only` is available), [`run_sensitivity.py`](src/run_sensitivity.py), and [`evaluate_final.py`](src/evaluate_final.py), with matching `check_*.py` replay checks in `src/`. The [baseline](results/baseline_validation.md), [MLP](results/neural_validation.md), and [final](results/final_evaluation.md#reproduction-and-verification) reports state their order and settings.
+
+The optional GNN requires the additional [PyTorch Geometric environment recipe](configs/environment-gnn.txt). Its [separate report](results/gnn_final.md#reproduction-and-limits) documents execution order and the extension's frozen-run boundary. It is not required to reproduce the original Ridge/MLP study.
 
 **Reproduction boundary:** `configs/final_evaluation.json` is a locked record of the original run and checks exact input, manifest, and checkpoint hashes. A newly trained MLP or regenerated manifest may have different bytes, so the final sensitivity/evaluation scripts can intentionally reject a fresh run even when its method is the same. The published aggregate results document the original locked evaluation; exact replay requires its locally retained, Git-ignored artifacts. Do not treat the frozen lock as a portable promise of byte-identical GPU retraining.
 

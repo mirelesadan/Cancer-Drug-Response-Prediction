@@ -1,0 +1,4 @@
+# Extend the tested Python 3.12 / PyTorch CUDA environment with PyG core.
+# Optional compiled PyG extensions are unnecessary for this experiment.
+-r environment-final.txt
+torch-geometric==2.8.0.post1

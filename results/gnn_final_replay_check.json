@@ -1,0 +1,10 @@
+{
+  "bootstrap_draws": 2000,
+  "check": "passed",
+  "checkpoint_count": 3,
+  "max_abs_prediction_difference": 1.9073486328125e-06,
+  "prediction_tolerance": 1e-05,
+  "scope": "exploratory_GNN_extension_original_test_results_already_public",
+  "test_cell_lines": 120,
+  "test_rows": 13622
+}

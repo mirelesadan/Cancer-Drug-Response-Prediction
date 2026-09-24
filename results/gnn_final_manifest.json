@@ -1,0 +1,27 @@
+{
+  "artifact_sha256": {
+    "results/gnn_bootstrap_intervals.csv": "48215bba07fa947555b8ab6038a5f88862f3166850376579445ae637c651d126",
+    "results/gnn_test_by_drug.csv": "849892f93655f02f11bf2a77908c736b6abe88c3b70097a93268415b63b580e8",
+    "results/gnn_test_comparison.csv": "276af47db44b3aa54815b31db31a64753d615f31ea87d8559540b16eb34768d1",
+    "results/tmp/gnn_bootstrap_replicates.npz": "fd695317ce564ee19de6aca36510bf7d85add8782161d18fc6834190c392c9aa",
+    "results/tmp/gnn_test_predictions.csv": "97e975aac8cb85389f8bdd1196fa7b34fc50fb50e706449ed7b7efeeb64605ea"
+  },
+  "checks": [
+    "pretest_frozen_hashes",
+    "baseline_row_and_target_alignment",
+    "checkpoint_identity",
+    "known_drug_training_coverage",
+    "finite_predictions",
+    "paired_original_bootstrap_draws",
+    "original_ridge_reproduction",
+    "no_seed_selection_or_prediction_ensemble"
+  ],
+  "device": "cuda",
+  "lock_sha256": "c0d6ad3df9262cf1c5400f8cc4b89ee9514afaceca19925b2bee9b5ecc79d01f",
+  "runtime_seconds": 1.8941008999972837,
+  "scope": "exploratory_GNN_extension_on_previously_published_cell_line_test_split",
+  "test_cell_lines": 120,
+  "test_drugs": 135,
+  "test_rows": 13622,
+  "validation_manifest_sha256": "b4198eedfb21a812a2415ecb6ef2eabe98246a2ca1de6f7e3348dd17219d5a8a"
+}

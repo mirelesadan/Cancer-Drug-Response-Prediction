@@ -1,0 +1,34 @@
+{
+  "scope": "exploratory_GNN_extension_on_previously_published_cell_line_test_split",
+  "frozen_after_validation": "2026-09-23",
+  "test_caveat": "the_original_models_test_results_were_already_public_before_this_GNN_architecture_was_chosen",
+  "no_further_training_or_tuning": true,
+  "no_training_plus_validation_refit": true,
+  "primary_dataset": "frozen_non_Uprosertib_responses",
+  "split": "existing_seed_17_cell_line_assignment",
+  "model_policy": "evaluate_all_three_best_validation_checkpoints_no_test_seed_selection_no_prediction_ensemble",
+  "reference_model": "unchanged_per_drug_ridge",
+  "test_metrics": ["response_weighted_RMSE", "response_weighted_MAE", "equal_drug_mean_RMSE", "median_defined_within_drug_Spearman"],
+  "within_drug_spearman": "minimum_3_rows_and_nonconstant_Y_and_prediction_else_undefined",
+  "bootstrap": {
+    "source": "reuse_original_2000_paired_cell_line_draws",
+    "seed": 2026,
+    "sampling_unit": "whole_cell_lines_with_all_response_rows_and_cluster_multiplicity",
+    "interval": "2.5_and_97.5_percentiles",
+    "comparison": "GNN_minus_per_drug_Ridge_RMSE",
+    "gnn_three_seed_summary": "mean_seed_specific_metric_within_each_draw_not_prediction_ensemble",
+    "interpretation": "conditional_on_fitted_models_and_this_split_not_retraining_or_new_drugs"
+  },
+  "frozen_sha256": {
+    "configs/gnn_extension.json": "a6ebd64f76b8653b12aa1a61a3a68266e560a1cbc3d781a123ced12d606c16a3",
+    "results/gnn_validation_manifest.json": "b4198eedfb21a812a2415ecb6ef2eabe98246a2ca1de6f7e3348dd17219d5a8a",
+    "results/checkpoints/gnn_seed_17.pt": "e756f8f47d516b9cd72e8b7d8e4caff4f2f8d317438dee2a52031d80f64f31b6",
+    "results/checkpoints/gnn_seed_29.pt": "ebde08400d63809f79c962d74e697190106f77215b3a1301c2be0d9dc657ee2c",
+    "results/checkpoints/gnn_seed_43.pt": "31f5f1157cf35e622fba2483c7f2555466a5b47205ed94ade44c270f922ed09c",
+    "results/tmp/primary_test_predictions.csv": "14cada0b5369a7a8072347ffbdb0db76c5272a35640e3103780ae2811e10aa0e",
+    "results/tmp/final_bootstrap_replicates.npz": "64b2a63557624dd02b21370f05a108e390751e50d0509731d13e94a6265970fd",
+    "data/processed/primary_responses.csv": "60d482a7b5d80c67d4869443896a7724fc03bf3614a51b632ff5d02e5cf7b357",
+    "data/processed/drugs.csv": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+    "data/processed/expression_pca128_scaled.npy": "014029aab651fb0c3ff6d89b29d8db6a15f4e293444dcc4878fc7d3b605aacc3"
+  }
+}

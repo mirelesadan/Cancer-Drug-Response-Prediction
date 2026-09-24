@@ -1,0 +1,58 @@
+{
+  "artifact_sha256": {
+    "results/checkpoints/gnn_seed_17.pt": "e756f8f47d516b9cd72e8b7d8e4caff4f2f8d317438dee2a52031d80f64f31b6",
+    "results/checkpoints/gnn_seed_29.pt": "ebde08400d63809f79c962d74e697190106f77215b3a1301c2be0d9dc657ee2c",
+    "results/checkpoints/gnn_seed_43.pt": "31f5f1157cf35e622fba2483c7f2555466a5b47205ed94ade44c270f922ed09c",
+    "results/gnn_validation_by_drug.csv": "1bd47b44527e46864d8b08ddf0de81da04ffa505b3250ba546f27ae6e7faa349",
+    "results/gnn_validation_runs.csv": "f04054615b55e9ea47e05ff7e58d5f8c1247fe9ec74e4a14b590acf52aeb6006",
+    "results/tmp/gnn_learning_curves.csv": "3e0bf99e3c4a557c1bc3a9785dbb09914a3b7cc4e62752f03e459b086bce50a2",
+    "results/tmp/gnn_validation_predictions.csv": "622ed9d610823db6d579802a30a243b2295eda7e6363ca0108da0c6f165dc25d"
+  },
+  "atom_feature_dim": 155,
+  "baseline_manifest_sha256": "afbd1f19f2ec731778184020e526e14591d2fcb772c1bd00e21f068d0a840224",
+  "bond_feature_dim": 12,
+  "checks": [
+    "frozen_input_hashes",
+    "split_and_row_alignment",
+    "training_drug_coverage",
+    "deterministic_graph_featurization",
+    "finite_smoke_and_gradients",
+    "finite_losses",
+    "checkpoint_reload",
+    "no_test_predictions"
+  ],
+  "config_sha256": "a6ebd64f76b8653b12aa1a61a3a68266e560a1cbc3d781a123ced12d606c16a3",
+  "determinism": {
+    "allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "dataloader_workers": 0,
+    "deterministic_algorithms": false
+  },
+  "drug_catalog_sha256": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+  "expression_scores_sha256": "014029aab651fb0c3ff6d89b29d8db6a15f4e293444dcc4878fc7d3b605aacc3",
+  "graph_sha256": "27c648ea579969595c7bb3b9013fc67a153e9976bdd45c17c7fe4befa892de0e",
+  "hardware": {
+    "device": "cuda",
+    "driver": "610.88",
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU"
+  },
+  "input_primary_sha256": "60d482a7b5d80c67d4869443896a7724fc03bf3614a51b632ff5d02e5cf7b357",
+  "runtime_seconds_total": 75.20424869999988,
+  "scope": "exploratory_validation_only_no_test_predictions",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pyg": "2.8.0.post1",
+    "python": "3.12.8",
+    "rdkit": "2023.09.6",
+    "torch": "2.11.0+cu128",
+    "torch_cuda": "12.8"
+  }
+}
