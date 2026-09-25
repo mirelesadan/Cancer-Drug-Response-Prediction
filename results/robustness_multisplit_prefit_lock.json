@@ -1,0 +1,36 @@
+{
+  "bootstrap_draws_per_split": 2000,
+  "created_utc": "2026-09-25T03:36:21.659319+00:00",
+  "historical_seed_17": "reference only; excluded from new-split summary",
+  "input_sha256": {
+    "gdsc2.pkl": "0d09b9d69cc714fd2b4a31e2b1f602c09ed82c282533683c5fc734ceb226f9e5",
+    "gdsc_gene_symbols.tab": "5712acc83f8be3b03345cbd56f5ae3289582ef08caf6991b92eca1728eb73296"
+  },
+  "model_config_sha256": {
+    "baseline_ridge.json": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+    "neural_mlp.json": "abac111e1c91404c1f3ef63821fa4ea2c8102640526ebb092a1c58be424cddf4"
+  },
+  "models": "primary",
+  "preprocessing_template_sha256": "d3ae683ad75d81ec632c8e2fba7f66609f9e804f1465088e6ae1b229e460e803",
+  "protocol_sha256": "cb445c4e1c2bb4afd056f3463dbf949e4086474a23a9a6c616a8f0d6cf69c677",
+  "schema_version": 1,
+  "source_sha256": {
+    "src/baselines.py": "ddb9ff372bf27c5c3cbcd7fe7541bc21043217515deb796d03682eb77c6ec4ed",
+    "src/evaluate_fresh.py": "d6cc24ce43204d62a287b43f4e66a40bbd202af15837c5b12cae370c6591af3e",
+    "src/neural.py": "9618df06717c541f6b0c98795621e16c1fa8160c4ecfbf6f3115f2f386a57732",
+    "src/prepare_gdsc2.py": "2b655bc11591200592ea09d6624e0c3dfd3ea98d284d43b8467bdca46e80764a",
+    "src/preprocessing.py": "7a943d8826a853e0a2050314e9d64bde08b0664f68b2f49c57c6d46fad880fb2",
+    "src/run_baselines.py": "68a6582f2ea51cfacf639027f89162d6e14afea710a2d2405676fe4ca8851c08",
+    "src/run_fresh.py": "3776bfb99f25a7c15d314e95e25d37a596465a449cf1351d823a821ba38baeee",
+    "src/run_multisplit.py": "c30c30af7438ac0b44441ff6c71d7d073bfadcaa67e5e1099df5c7e7cf0fe1a3",
+    "src/run_neural.py": "d525f8acd06b2c8b7ab06de1b2fec9e2957deb5a0629fcb50b0bfd23a1da1a7a"
+  },
+  "split_seeds": [
+    19,
+    23,
+    29,
+    31,
+    37
+  ],
+  "study_type": "exploratory_grouped_split_robustness"
+}

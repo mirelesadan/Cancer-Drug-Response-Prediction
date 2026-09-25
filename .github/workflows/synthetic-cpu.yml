@@ -35,3 +35,8 @@ jobs:
 
       - name: Fresh-run pipeline on invented cell and drug records
         run: python -m unittest discover -s tests -p 'test_fresh_run.py' -v
+
+      - name: Robustness runners on invented records
+        run: |
+          python -m unittest discover -s tests -p 'test_multisplit.py' -v
+          python -m unittest discover -s tests -p 'test_pca_sensitivity.py' -v

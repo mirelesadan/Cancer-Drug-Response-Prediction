@@ -1,0 +1,33 @@
+{
+  "exclusions": "No response rows, raw expression/fingerprints, checkpoints, or row-level predictions exported.",
+  "exported_sha256": {
+    "robustness_multisplit_comparison.csv": "36225c92c735eea7c3ce2b81a981731b0c699f780557c89efcc11e89b50b72f4",
+    "robustness_multisplit_manifest.json": "a550ab731cc7004ef1d2afc73d07e390c96767207a4f0ee8541860f55da61e13",
+    "robustness_multisplit_paired_differences.csv": "e55c61b37cb294aa46ce2cbe95fd1a77237b90a847e7bfeaa452c6996c664a7d",
+    "robustness_multisplit_prefit_lock.json": "5566cba545a84f58ea96fdfd51676892119c008bb699e77aa56537029fb79511",
+    "robustness_multisplit_summary.csv": "5dd3e4de3cb5a6d4b82bedadf67094a023e72d9014bb099d4a54223c85828ded",
+    "robustness_multisplit_test_by_drug.csv": "d6e0b3a589264e99494d9600815f3f653c4802c356669873a7e9e17dce3e272c",
+    "robustness_pca_bootstrap_intervals.csv": "33c23160e82112b77bb59db492d9dc17fe69ae7285174b1f7445c09a020464b5",
+    "robustness_pca_fit_summary.csv": "2ed09e920a11424d74ed2596b0232a5c8cfec9044e1aa40f9bde033b2e85abab",
+    "robustness_pca_manifest.json": "39a11d19709898680213e3eb98604ff7bfbf6104481b07522308c562d598384a",
+    "robustness_pca_paired_differences.csv": "5d4e788562b154df5a0c161e18c13a940650edf4a66ff3f5ee3680976d9ab7d5",
+    "robustness_pca_pretest_lock.json": "4669532a5473b8ab20d09217918d54f3deed3d328b48319d74eb62af0b7bc82b",
+    "robustness_pca_summary.csv": "907b46224703c29fd1d0e922dde627eedbb003d2ef8dea6c9c5e3f921fee92c3",
+    "robustness_pca_test_by_drug.csv": "60ee73c0791f8a1605cbcb992c5cd8a402772f366170cece96fb93ea5164d0fd",
+    "robustness_pca_test_metrics.csv": "59c83adf6aa024e938a89225e7d7fd9635eb08e2b7a6af610e28478314948f2c",
+    "robustness_pca_validation_metrics.csv": "f286372ae53b1a690a8c2812a72867fe6910fba666b1a56b73d576db54a4d0d1"
+  },
+  "exported_utc": "2026-09-25T03:51:35.339561+00:00",
+  "pca_manifest_sha256": "39a11d19709898680213e3eb98604ff7bfbf6104481b07522308c562d598384a",
+  "pca_pretest_lock_sha256": "4669532a5473b8ab20d09217918d54f3deed3d328b48319d74eb62af0b7bc82b",
+  "protocol_sha256": "cb445c4e1c2bb4afd056f3463dbf949e4086474a23a9a6c616a8f0d6cf69c677",
+  "schema_version": 1,
+  "split_seeds": [
+    19,
+    23,
+    29,
+    31,
+    37
+  ],
+  "split_study_manifest_sha256": "a550ab731cc7004ef1d2afc73d07e390c96767207a4f0ee8541860f55da61e13"
+}

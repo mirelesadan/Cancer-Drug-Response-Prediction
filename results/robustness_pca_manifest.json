@@ -1,0 +1,48 @@
+{
+  "bootstrap": {
+    "comparison_draws": "paired_across_models_within_each_split",
+    "per_split_resamples": 2000,
+    "seed": 2026,
+    "unit": "whole_cell_line"
+  },
+  "checks": [
+    "all_fitted_artifact_hashes_before_test_scoring",
+    "prespecified_split_assignments",
+    "seed_invariant_response_identity",
+    "training_only_gene_and_PCA_score_scaling",
+    "validation_only_alpha_selection",
+    "128_component_saved_checkpoint_replay",
+    "test_row_and_feature_alignment",
+    "saved_test_prediction_replay",
+    "paired_whole_cell_bootstrap_multiplicity"
+  ],
+  "dimensions": [
+    64,
+    128,
+    256
+  ],
+  "interpretation": "Exploratory internal robustness: five overlapping splits of the same public GDSC2 snapshot; intervals are conditional on each split and fitted models, not independent study replication.",
+  "pretest_lock_sha256": "4669532a5473b8ab20d09217918d54f3deed3d328b48319d74eb62af0b7bc82b",
+  "runtime_seconds": 12.728489599976456,
+  "schema_version": 1,
+  "split_seeds": [
+    19,
+    23,
+    29,
+    31,
+    37
+  ],
+  "study_id": "gdsc2_grouped_split_and_pca_sensitivity_2026_09_24",
+  "test_output_sha256": {
+    "seed_19/test_predictions.csv": "b85e9e70e498326b9bbeab4846f49a0591c9d7c211a2e44adaf8b2c1fe05eb52",
+    "seed_23/test_predictions.csv": "e6dced3dc46c5c1a54929837b07cd03d794413dc58b5469e6e496d051d1fe2f7",
+    "seed_29/test_predictions.csv": "5b9c1945f6b775d3cdbef13ddc8ce622aadf7fa9df2bcaac83c6e67b5ebd8d2a",
+    "seed_31/test_predictions.csv": "2bb8e1f8cb808a321b91c6d65e6098a4753657df6f8bd5123fe5027c3d01e65d",
+    "seed_37/test_predictions.csv": "873c6049c12df4091c4968468299799174937121328ad29c1b9078c2ec7ed8b8",
+    "test_across_split_summary.csv": "907b46224703c29fd1d0e922dde627eedbb003d2ef8dea6c9c5e3f921fee92c3",
+    "test_bootstrap_intervals.csv": "33c23160e82112b77bb59db492d9dc17fe69ae7285174b1f7445c09a020464b5",
+    "test_by_drug.csv": "60ee73c0791f8a1605cbcb992c5cd8a402772f366170cece96fb93ea5164d0fd",
+    "test_metrics.csv": "59c83adf6aa024e938a89225e7d7fd9635eb08e2b7a6af610e28478314948f2c",
+    "test_paired_differences.csv": "5d4e788562b154df5a0c161e18c13a940650edf4a66ff3f5ee3680976d9ab7d5"
+  }
+}

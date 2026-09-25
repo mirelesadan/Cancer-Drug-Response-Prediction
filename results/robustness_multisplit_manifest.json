@@ -1,0 +1,224 @@
+{
+  "aggregate_sha256": {
+    "multisplit_comparison.csv": "36225c92c735eea7c3ce2b81a981731b0c699f780557c89efcc11e89b50b72f4",
+    "multisplit_paired_differences.csv": "e55c61b37cb294aa46ce2cbe95fd1a77237b90a847e7bfeaa452c6996c664a7d",
+    "multisplit_summary.csv": "5dd3e4de3cb5a6d4b82bedadf67094a023e72d9014bb099d4a54223c85828ded"
+  },
+  "completed_utc": "2026-09-25T03:48:16.386588+00:00",
+  "interpretation_boundary": "Same public GDSC2 snapshot and overlapping cell-line splits; descriptive internal robustness only, not independent confirmation or a five-sample population confidence interval.",
+  "model_mode": "primary",
+  "n_completed_splits": 5,
+  "per_split": [
+    {
+      "cells_by_split": {
+        "test": 120,
+        "train": 564,
+        "validation": 121
+      },
+      "drugs_by_split": {
+        "test": 136,
+        "train": 136,
+        "validation": 136
+      },
+      "fresh_bootstrap_intervals_sha256": "ba2a0ad80b809973e257c9223cd067ad4a290058c71f6d43ae94780a7180e6a9",
+      "fresh_evaluation_lock_sha256": "9c556ae765d54aa8aebe3bd15205df5810e0d5dc3239581c136e0e5d47fab779",
+      "fresh_evaluation_manifest_sha256": "55bf3a321d49143083bb7b029645daf69c8b7e65e75282cf3ed9841e90c5d070",
+      "fresh_test_comparison_sha256": "f3d35c32ef50e44845b5f2628831aced104cd23fb8bd11d780eb28025c00d620",
+      "minimum_drug_rows_by_split": {
+        "test": 5,
+        "train": 29,
+        "validation": 5
+      },
+      "n_primary_rows": 91229,
+      "preprocessing_config_sha256": "0adb3d76f5a7a30e313f1a403d666faffd5314f32b857ae56499a1f2b7e9a61d",
+      "preprocessing_manifest_sha256": "f825e989173bec5e58d6fd513c9402837db4fceb9776d06c7dabd79276194ae9",
+      "primary_identity_sha256_excluding_split": "a027a709db74a66ce606de552b8a3342647c1947ec3b928373dbb6ba56c97857",
+      "primary_response_sha256": "6257264e86f0ee4319e06ac47473a19d34ed89a8a5372155b01bf3eb8088bc4b",
+      "rows_by_split": {
+        "test": 13476,
+        "train": 64001,
+        "validation": 13752
+      },
+      "run_directory": "seed_19",
+      "runtime_seconds": 137.9442204000079,
+      "seed": 19,
+      "selected_alpha": {
+        "per_drug_ridge": 100.0,
+        "pooled_ridge": 100.0
+      },
+      "selected_mlp_learning_rate": 0.0002999999999999,
+      "validation_selected_model": "per_drug_ridge"
+    },
+    {
+      "cells_by_split": {
+        "test": 120,
+        "train": 564,
+        "validation": 121
+      },
+      "drugs_by_split": {
+        "test": 136,
+        "train": 136,
+        "validation": 136
+      },
+      "fresh_bootstrap_intervals_sha256": "70d72d26a25da36e1d84fb37228d7c1a458accbdbf9505772c0035769b8f8d98",
+      "fresh_evaluation_lock_sha256": "400de3a2fd9ea3700a9de5e9f69971fecae9b4d8e7e7cdd3da3e36b45866ba70",
+      "fresh_evaluation_manifest_sha256": "66727524440a4030666df0b195081c8e2dbb8706bb61e1f31898684e8b1d2b02",
+      "fresh_test_comparison_sha256": "5d4601b70126fa03a05db259ea320bef9917ebac1125398056bc34b9aeecb085",
+      "minimum_drug_rows_by_split": {
+        "test": 2,
+        "train": 35,
+        "validation": 5
+      },
+      "n_primary_rows": 91229,
+      "preprocessing_config_sha256": "0ef5e865ebe20cab8177cdd01060229f3c794929a30c6403a29b846b2e3e59e6",
+      "preprocessing_manifest_sha256": "3432a6ea3dcfedfc870da41f26a38ef8b67de1df4e264793ff2f8d911535c3cd",
+      "primary_identity_sha256_excluding_split": "a027a709db74a66ce606de552b8a3342647c1947ec3b928373dbb6ba56c97857",
+      "primary_response_sha256": "0c394dcd00b8a5f6e0bb8d2628264ba98b1e2acadee58d74165ac870bf0502ce",
+      "rows_by_split": {
+        "test": 13909,
+        "train": 63903,
+        "validation": 13417
+      },
+      "run_directory": "seed_23",
+      "runtime_seconds": 140.63430839998182,
+      "seed": 23,
+      "selected_alpha": {
+        "per_drug_ridge": 100.0,
+        "pooled_ridge": 100.0
+      },
+      "selected_mlp_learning_rate": 0.0002999999999999,
+      "validation_selected_model": "per_drug_ridge"
+    },
+    {
+      "cells_by_split": {
+        "test": 120,
+        "train": 564,
+        "validation": 121
+      },
+      "drugs_by_split": {
+        "test": 136,
+        "train": 136,
+        "validation": 136
+      },
+      "fresh_bootstrap_intervals_sha256": "456ae04bcf6f00c7c8f0cc4cc6da5bf0554d5cbeaa7d6e20891096e03cf7b188",
+      "fresh_evaluation_lock_sha256": "8db69a8dbbc9e03feed53aac8a54e71c73162272a4e7e87eb79b77688672f96d",
+      "fresh_evaluation_manifest_sha256": "658c14ab59c3d9a9392d948255399221b97912c0db4b93e0aa02fdbe05635239",
+      "fresh_test_comparison_sha256": "5199e1a35364747a47ff54d404e25b31d4d191e8de70eb68d20cd94cfbb70a6d",
+      "minimum_drug_rows_by_split": {
+        "test": 4,
+        "train": 31,
+        "validation": 6
+      },
+      "n_primary_rows": 91229,
+      "preprocessing_config_sha256": "6571a86c606553801b00302fcec0ed80f873844e9d63de8157d201784c886fca",
+      "preprocessing_manifest_sha256": "b9c828d301b44d665460ee8cd6889d8cbbac1ef638f7636cbcafb8bb16cce97c",
+      "primary_identity_sha256_excluding_split": "a027a709db74a66ce606de552b8a3342647c1947ec3b928373dbb6ba56c97857",
+      "primary_response_sha256": "5fd9039416b6cc3698569a6c171a817e3daf495355fcdfa0ab3b0f065a13a631",
+      "rows_by_split": {
+        "test": 13581,
+        "train": 63794,
+        "validation": 13854
+      },
+      "run_directory": "seed_29",
+      "runtime_seconds": 136.3490574999887,
+      "seed": 29,
+      "selected_alpha": {
+        "per_drug_ridge": 10.0,
+        "pooled_ridge": 100.0
+      },
+      "selected_mlp_learning_rate": 0.0002999999999999,
+      "validation_selected_model": "per_drug_ridge"
+    },
+    {
+      "cells_by_split": {
+        "test": 120,
+        "train": 564,
+        "validation": 121
+      },
+      "drugs_by_split": {
+        "test": 136,
+        "train": 136,
+        "validation": 136
+      },
+      "fresh_bootstrap_intervals_sha256": "789708fdb231bb11bcf9932c06b4935d097ca0db2f36717ad5d4420510a8a481",
+      "fresh_evaluation_lock_sha256": "42f4c6dff5f53f3c170b9af938c2bbe599e9fd0c1bd8dbce3850d91a9a376097",
+      "fresh_evaluation_manifest_sha256": "583e26974da5613c02dc2cea1bdaa2508101be46f89279d05a70cea000abf024",
+      "fresh_test_comparison_sha256": "a9c8892da970f0f8cb0d5068f768e51940bcbb9aba3f20db6ce91b701d2a44ad",
+      "minimum_drug_rows_by_split": {
+        "test": 3,
+        "train": 31,
+        "validation": 5
+      },
+      "n_primary_rows": 91229,
+      "preprocessing_config_sha256": "f3c90e7ddb2ddbfbbf9fdee6419474592ca24a6baa0d132253c088e9598b1974",
+      "preprocessing_manifest_sha256": "51df8be6df05e846a439c4c2bfc7b28cf4ac14271b6abc6e35d345b2333ba79c",
+      "primary_identity_sha256_excluding_split": "a027a709db74a66ce606de552b8a3342647c1947ec3b928373dbb6ba56c97857",
+      "primary_response_sha256": "f3bb13ea9a21e1671c957e38e02fe372fc416be2bb517a2eca78faaf2859f698",
+      "rows_by_split": {
+        "test": 13709,
+        "train": 63979,
+        "validation": 13541
+      },
+      "run_directory": "seed_31",
+      "runtime_seconds": 150.85484430001816,
+      "seed": 31,
+      "selected_alpha": {
+        "per_drug_ridge": 100.0,
+        "pooled_ridge": 10.0
+      },
+      "selected_mlp_learning_rate": 0.0002999999999999,
+      "validation_selected_model": "per_drug_ridge"
+    },
+    {
+      "cells_by_split": {
+        "test": 120,
+        "train": 564,
+        "validation": 121
+      },
+      "drugs_by_split": {
+        "test": 136,
+        "train": 136,
+        "validation": 136
+      },
+      "fresh_bootstrap_intervals_sha256": "c0ec6c529de1c7efc7dd68795390918440aa43ea8f33f8013349b47f03e68fe1",
+      "fresh_evaluation_lock_sha256": "f12f5dfdab6db54674efb20ddc5fbbbb80c9476d0912dda8683c061a9906d646",
+      "fresh_evaluation_manifest_sha256": "a1280f0344327ece437b2a507461cdb8e6e7bd45493fee52340fe6521a01c42a",
+      "fresh_test_comparison_sha256": "3f8bdb2f6aff21e7d9c219275649cc560b24ed24e175a28ee962af71d7ee93a9",
+      "minimum_drug_rows_by_split": {
+        "test": 3,
+        "train": 29,
+        "validation": 5
+      },
+      "n_primary_rows": 91229,
+      "preprocessing_config_sha256": "fdd148837343e6e56c05cb7cf9ea4119209122e36eadc217546ab5e59921ccb5",
+      "preprocessing_manifest_sha256": "e795930cff075d93d06378fc6b974699fc6053a8ce99cf9c42af9e78d6de3ed5",
+      "primary_identity_sha256_excluding_split": "a027a709db74a66ce606de552b8a3342647c1947ec3b928373dbb6ba56c97857",
+      "primary_response_sha256": "d578f40c0ec305b6c860ac7ffe5a5a2492735d17f4d7050c2ffbb28e6714e8a5",
+      "rows_by_split": {
+        "test": 13415,
+        "train": 64051,
+        "validation": 13763
+      },
+      "run_directory": "seed_37",
+      "runtime_seconds": 148.87786859998596,
+      "seed": 37,
+      "selected_alpha": {
+        "per_drug_ridge": 100.0,
+        "pooled_ridge": 10.0
+      },
+      "selected_mlp_learning_rate": 0.0002999999999999,
+      "validation_selected_model": "per_drug_ridge"
+    }
+  ],
+  "prefit_protocol_lock_sha256": "5566cba545a84f58ea96fdfd51676892119c008bb699e77aa56537029fb79511",
+  "primary_identity_sha256_excluding_split": "a027a709db74a66ce606de552b8a3342647c1947ec3b928373dbb6ba56c97857",
+  "protocol_sha256": "cb445c4e1c2bb4afd056f3463dbf949e4086474a23a9a6c616a8f0d6cf69c677",
+  "schema_version": 1,
+  "split_seeds": [
+    19,
+    23,
+    29,
+    31,
+    37
+  ]
+}

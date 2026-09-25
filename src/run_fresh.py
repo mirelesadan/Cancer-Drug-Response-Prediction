@@ -56,6 +56,8 @@ def make_lock(run_dir: Path, *, mode: str, bootstrap_draws: int) -> Path:
     results = run_dir / "results"
     baseline_manifest = json_file(results / "baseline_validation_manifest.json")
     prep_manifest = json_file(results / "preprocessing_manifest.json")
+    preprocessing_config = json_file(run_dir / "configs/preprocessing.json")
+    split_seed = int(preprocessing_config["split"]["seed"])
     baseline_comparison = pd.read_csv(results / "baseline_comparison.csv")
     required = [
         "configs/preprocessing.json", "configs/baseline_ridge.json",
@@ -117,10 +119,11 @@ def make_lock(run_dir: Path, *, mode: str, bootstrap_draws: int) -> Path:
         "schema_version": 1,
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "mode": mode,
+        "split_seed": split_seed,
         "protocol": {
             "question": "known drugs in previously unseen cancer cell lines",
             "target": "provided Y; no additional transform",
-            "split": "seed-17 disjoint cell lines from preprocessing configuration",
+            "split": f"seed-{split_seed} disjoint cell lines from preprocessing configuration",
             "fitting": "training rows only; expression transforms fitted on unique training cells",
             "selection": "validation RMSE; no train-plus-validation refit",
             "test": "evaluate the locked models once after this file is written",
@@ -154,8 +157,11 @@ def main() -> None:
     parser.add_argument("--run-dir", type=Path, required=True, help="New directory for generated artifacts; must not exist")
     parser.add_argument("--preprocessing-config", type=Path, default=SOURCE_ROOT / "configs/preprocessing.json")
     parser.add_argument("--models", choices=("baselines", "primary"), default="primary", help="Primary adds the six fixed MLP validation runs")
+    parser.add_argument("--split-seed", type=int, default=17, help="Grouped cell-line split seed; default preserves the original seed-17 method")
     parser.add_argument("--bootstrap-draws", type=int, default=2000)
     args = parser.parse_args()
+    if args.split_seed < 0:
+        parser.error("--split-seed must be nonnegative")
     if args.bootstrap_draws < 2:
         parser.error("--bootstrap-draws must be at least 2")
     input_dir = args.input_dir.resolve(strict=True)
@@ -179,7 +185,15 @@ def main() -> None:
     (run_dir / "data/processed").mkdir(parents=True)
     (run_dir / "results/checkpoints").mkdir(parents=True)
     (run_dir / "results/tmp").mkdir(parents=True)
-    shutil.copyfile(args.preprocessing_config, run_dir / "configs/preprocessing.json")
+    if args.split_seed == int(config["split"]["seed"]):
+        # Preserve the original config bytes for the default seed-17 path.
+        shutil.copyfile(args.preprocessing_config, run_dir / "configs/preprocessing.json")
+    else:
+        derived_config = json.loads(json.dumps(config))
+        derived_config["split"]["seed"] = args.split_seed
+        (run_dir / "configs/preprocessing.json").write_text(
+            json.dumps(derived_config, indent=2) + "\n", encoding="utf-8",
+        )
     for name in CONFIG_NAMES[1:]:
         shutil.copyfile(SOURCE_ROOT / "configs" / name, run_dir / "configs" / name)
     run_metadata = {
@@ -188,6 +202,7 @@ def main() -> None:
         "source_root": str(SOURCE_ROOT),
         "python_executable": sys.executable,
         "mode": args.models,
+        "split_seed": args.split_seed,
         "raw_sha256": config["input_sha256"],
     }
     (run_dir / "results/run_metadata.json").write_text(json.dumps(run_metadata, indent=2) + "\n", encoding="utf-8")

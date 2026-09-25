@@ -1,0 +1,336 @@
+{
+  "created_utc": "2026-09-25T03:49:41.464578+00:00",
+  "generated_sha256": {
+    "pca_fit_summary.csv": "2ed09e920a11424d74ed2596b0232a5c8cfec9044e1aa40f9bde033b2e85abab",
+    "seed_19/pca_256/models.joblib": "a7de5d11803bb91600eb8c716b41b41a5085a5e8df62968976d431d18518a333",
+    "seed_19/pca_256/scores.npy": "37bb8355e20e2b7899fbac871f1fd750f6ccb3669f2be190d5def110aa968231",
+    "seed_19/pca_256/transforms.joblib": "c4a042251632a066a009577b68d236b33cc8a6a350bd80755f2e1f6b762f35a4",
+    "seed_19/pca_256/validation_predictions.csv": "53c0aed2fde618dfb635ed64e874e338348a409abcb5a0f8dbb6a4b80668d3ce",
+    "seed_19/pca_64/models.joblib": "bf99549266c4cfbe3d6501071725d81b8b68a194b172db08bf175550c1f5c6a9",
+    "seed_19/pca_64/scores.npy": "4409cd6713c3ccbe129c9a1ccbc9bce169ecb735e3daaad0f0a2565dc08eb7bc",
+    "seed_19/pca_64/transforms.joblib": "be911558702e804566f4e4e4c0f0983a39d2bd6b3b7d4fb001a3d4286225b6ed",
+    "seed_19/pca_64/validation_predictions.csv": "d77b3b0e9559bbf20f0e05fa7a0c0d9966db273e398f4e5a6495794fb203307e",
+    "seed_23/pca_256/models.joblib": "5f51babe8bfbf2abd957fb70e08ac2e98049f0af1b05db13b06e53c73c7f1451",
+    "seed_23/pca_256/scores.npy": "2274e350ebc1375a6a740e3355a5b7b8788c6a7e8f171748861ee23f42932ac2",
+    "seed_23/pca_256/transforms.joblib": "511f82790b70cc0025c8c92f145c2d77f75ace68539de5d5916e2d123b2eb1f3",
+    "seed_23/pca_256/validation_predictions.csv": "25559c48ed1efa9e3238461fe1144dbc326ef65191809b3341e9627d45a436b8",
+    "seed_23/pca_64/models.joblib": "877456c74b6640cdd403a024b06f1961eec54cef649204cae5107635747bcaa8",
+    "seed_23/pca_64/scores.npy": "20dce96e3399751c07fd0901f23b58e04ad41afdfd91f71b5d7a7a8536c69bf7",
+    "seed_23/pca_64/transforms.joblib": "97330acb2c162caf9aacec9899634b9355c4bd7b1cf474eaeb872c5891920ed8",
+    "seed_23/pca_64/validation_predictions.csv": "ca87bc0f955b6908dcfcb20a05ce4f8a4a6808227ef9495089e733857f4f62d0",
+    "seed_29/pca_256/models.joblib": "b4b30b0524a353dec4dda8ef286331f34824eb622ebb6aaa6055284418c0063d",
+    "seed_29/pca_256/scores.npy": "d4924a5a85f8c64554f69edff78e651184f494848ce5120a93ff58ffc048c612",
+    "seed_29/pca_256/transforms.joblib": "d92c86361d505238decc14bfdab8ca1fd4e76e7b67a7cbad553e8912c81bb72f",
+    "seed_29/pca_256/validation_predictions.csv": "d869c549736b8ca52e4c7765332e6ce52ad9762a12db309300b5ca699e1474df",
+    "seed_29/pca_64/models.joblib": "9a0aac7bac937a3f6bc7ffd5431f1119d427ac4fcf723fafd7028d6c3d13659d",
+    "seed_29/pca_64/scores.npy": "8caaa8d75d3c991e3e5ee57d3b25786bc001a7a337bec458c628b993ae1d8738",
+    "seed_29/pca_64/transforms.joblib": "12d96988616067460b7b4f91f1849cd304f9939846003f1f71f923e8e43e1439",
+    "seed_29/pca_64/validation_predictions.csv": "fbf9a46484460e1c0317b5e96db8c8aa79860c8023dd1f0a0ae6d00608317663",
+    "seed_31/pca_256/models.joblib": "a8f2c507dcc181335f8bb1b1b3c09cc72cfcc474d7180bc9868b307e093d76cf",
+    "seed_31/pca_256/scores.npy": "f57aa43b1d94c88a513a4b0a0a311322857609fd4d6d74a2b637d9a72c2a7bcc",
+    "seed_31/pca_256/transforms.joblib": "953bb8123b51f8a19c7cc6df5f687c787a5048b9652c538ca70ad0c92bcced0c",
+    "seed_31/pca_256/validation_predictions.csv": "dc536142da3b394898eae884a6a1c2e642e6df87d3e7ea49521f2a1fefeb20fb",
+    "seed_31/pca_64/models.joblib": "c59fd2bdbc37617b97fb8f1c63298abaa65aac723955024df7c44f99366d1264",
+    "seed_31/pca_64/scores.npy": "dd729d1f8810935ff94b49a68acd04706eeb31287840a97e8eadbaba75e6639d",
+    "seed_31/pca_64/transforms.joblib": "23ef30e78ea0244752dd6c6a253f15aa0318231eb52fc1514b5b6a01cbc938bd",
+    "seed_31/pca_64/validation_predictions.csv": "68f4414b0631d4c8d667d463a7e7db7b478ce4b012925d1a330ec3c493972e55",
+    "seed_37/pca_256/models.joblib": "07a455c9eb54322f603f1c22e5b34246180a528121da6cb458ebe9e38d009d25",
+    "seed_37/pca_256/scores.npy": "161aa0985fda99f2018c2bf2bffdac2c140a9a8b6fed797eba1cec4be503adf7",
+    "seed_37/pca_256/transforms.joblib": "3e6da5f82ffde1611113fcbd2973d87aeb3a160f4b546b6b9940046bf1234440",
+    "seed_37/pca_256/validation_predictions.csv": "4762b7ffa36f52c6d3156bbce849de524d82bf388bf9f6f5be1ff7fab28d3758",
+    "seed_37/pca_64/models.joblib": "b89b91ca7ac47edcd00bcd3997b76cd9db0d29084d8592752960b13b3a79608c",
+    "seed_37/pca_64/scores.npy": "69bc46029f16b30f650940d677b2596be7dba4264c348f3397a286939a04e50e",
+    "seed_37/pca_64/transforms.joblib": "4958885ebe383d3ac873b5466b8a79341df7d102d3a620de9b78ad06f40eff1f",
+    "seed_37/pca_64/validation_predictions.csv": "90652f90a3a9f61c478fc33f40d8669d9c4d50c1f5ef0204fe14ed72a771c59c",
+    "validation_by_drug.csv": "cedf71db878ab9f80a0eae7bb240ddd3c23318a1b8ee224a1fa8289b73bda58b",
+    "validation_metrics.csv": "f286372ae53b1a690a8c2812a72867fe6910fba666b1a56b73d576db54a4d0d1"
+  },
+  "input_sha256": {
+    "configs/robustness_pca.json": "cb445c4e1c2bb4afd056f3463dbf949e4086474a23a9a6c616a8f0d6cf69c677",
+    "seed_19/configs/baseline_ridge.json": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+    "seed_19/configs/preprocessing.json": "0adb3d76f5a7a30e313f1a403d666faffd5314f32b857ae56499a1f2b7e9a61d",
+    "seed_19/data/processed/cell_line_assignments.csv": "9f1547e48ad79bb8475dc666e0d40a65c4409115b55cfa86853fb3f29ccd2362",
+    "seed_19/data/processed/drugs.csv": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+    "seed_19/data/processed/expression_features.csv": "c8fc2a2c021df99e4484457af6065b4f542c255d937a9f5233c8b6bba1d4ad3b",
+    "seed_19/data/processed/expression_pca128_scaled.npy": "96efdbc3cc6d36b3f849fbcb1b63632c6f5a516da19b953c531a9f4b90376378",
+    "seed_19/data/processed/expression_raw.npy": "aa6b165ab9f7f8c9d0d72fff297f27d61851cc8ceb711e17d618cecbb3c2505d",
+    "seed_19/data/processed/expression_transform.joblib": "947723cc0edf610b3a916fb6a255e0f815e80b14cf0a3710198738a8ac147798",
+    "seed_19/data/processed/morgan_radius2_2048.npy": "6a02b562369e655816a17d82e16d4e56630371118924d33bb782e20b0d5e2161",
+    "seed_19/data/processed/primary_responses.csv": "6257264e86f0ee4319e06ac47473a19d34ed89a8a5372155b01bf3eb8088bc4b",
+    "seed_19/results/baseline_validation_manifest.json": "bcec94a1cbfda476118862e9ac8ef0ff10acb516e097de79f001ee595ca8f9b8",
+    "seed_19/results/checkpoints/baseline_models.joblib": "9bd9b111ba20efcf3a05608be0712a3eb3c43c2aea966b98f0c94dff9320ca66",
+    "seed_19/results/fresh_evaluation_lock.json": "9c556ae765d54aa8aebe3bd15205df5810e0d5dc3239581c136e0e5d47fab779",
+    "seed_19/results/fresh_evaluation_manifest.json": "55bf3a321d49143083bb7b029645daf69c8b7e65e75282cf3ed9841e90c5d070",
+    "seed_19/results/preprocessing_manifest.json": "f825e989173bec5e58d6fd513c9402837db4fceb9776d06c7dabd79276194ae9",
+    "seed_19/results/tmp/baseline_validation_predictions.csv": "1e193768271123169dbdfe8143b009fb135bcf48ce3b6f425f5888e27ed2f733",
+    "seed_23/configs/baseline_ridge.json": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+    "seed_23/configs/preprocessing.json": "0ef5e865ebe20cab8177cdd01060229f3c794929a30c6403a29b846b2e3e59e6",
+    "seed_23/data/processed/cell_line_assignments.csv": "13060aca54e453576cab04851f4c25e2c43d2603747c575ad8ca20f51f3ffd92",
+    "seed_23/data/processed/drugs.csv": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+    "seed_23/data/processed/expression_features.csv": "c8fc2a2c021df99e4484457af6065b4f542c255d937a9f5233c8b6bba1d4ad3b",
+    "seed_23/data/processed/expression_pca128_scaled.npy": "f25e032b1611a84d13f9e8b5977f201fdc124a821807e131e8f0a251a4f08001",
+    "seed_23/data/processed/expression_raw.npy": "aa6b165ab9f7f8c9d0d72fff297f27d61851cc8ceb711e17d618cecbb3c2505d",
+    "seed_23/data/processed/expression_transform.joblib": "b977441518b5b36ff3013eaa5e522977340f8361760fa60883ba7d6dc70acc54",
+    "seed_23/data/processed/morgan_radius2_2048.npy": "6a02b562369e655816a17d82e16d4e56630371118924d33bb782e20b0d5e2161",
+    "seed_23/data/processed/primary_responses.csv": "0c394dcd00b8a5f6e0bb8d2628264ba98b1e2acadee58d74165ac870bf0502ce",
+    "seed_23/results/baseline_validation_manifest.json": "6fbb29cf8ca294f965fb0760910cbde974a650a051e75504eeabeb03353a3299",
+    "seed_23/results/checkpoints/baseline_models.joblib": "bf1d99c2f98bc500e856363d68f67971fa8376d7683a50596ab49cbfd6eaa7bd",
+    "seed_23/results/fresh_evaluation_lock.json": "400de3a2fd9ea3700a9de5e9f69971fecae9b4d8e7e7cdd3da3e36b45866ba70",
+    "seed_23/results/fresh_evaluation_manifest.json": "66727524440a4030666df0b195081c8e2dbb8706bb61e1f31898684e8b1d2b02",
+    "seed_23/results/preprocessing_manifest.json": "3432a6ea3dcfedfc870da41f26a38ef8b67de1df4e264793ff2f8d911535c3cd",
+    "seed_23/results/tmp/baseline_validation_predictions.csv": "88810ffd39e7d233b10c104d9be82c3af36d7d4008279d2c3c859690117aca71",
+    "seed_29/configs/baseline_ridge.json": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+    "seed_29/configs/preprocessing.json": "6571a86c606553801b00302fcec0ed80f873844e9d63de8157d201784c886fca",
+    "seed_29/data/processed/cell_line_assignments.csv": "48fd88ac55ad26be39b481cf9fce72f30c91ab2d98d7251247b52ea322069f9e",
+    "seed_29/data/processed/drugs.csv": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+    "seed_29/data/processed/expression_features.csv": "c8fc2a2c021df99e4484457af6065b4f542c255d937a9f5233c8b6bba1d4ad3b",
+    "seed_29/data/processed/expression_pca128_scaled.npy": "4c0bdd5f1f9f8b045f1cc24b0805f004d7d807af4cc3054bf30ff18c374cd97b",
+    "seed_29/data/processed/expression_raw.npy": "aa6b165ab9f7f8c9d0d72fff297f27d61851cc8ceb711e17d618cecbb3c2505d",
+    "seed_29/data/processed/expression_transform.joblib": "6867d0731239c9feb8ecc8d71c1975c7d708f8518d85a3e4ff98fb8ac001d97e",
+    "seed_29/data/processed/morgan_radius2_2048.npy": "6a02b562369e655816a17d82e16d4e56630371118924d33bb782e20b0d5e2161",
+    "seed_29/data/processed/primary_responses.csv": "5fd9039416b6cc3698569a6c171a817e3daf495355fcdfa0ab3b0f065a13a631",
+    "seed_29/results/baseline_validation_manifest.json": "51f7668d16f5cd079ee6a9c856c24f089e4b030adaf2f40ab61eb5311bd01759",
+    "seed_29/results/checkpoints/baseline_models.joblib": "e12322972a1da46f781310c7484de22b7b82b36a8d3c71dac54245f1d95a5324",
+    "seed_29/results/fresh_evaluation_lock.json": "8db69a8dbbc9e03feed53aac8a54e71c73162272a4e7e87eb79b77688672f96d",
+    "seed_29/results/fresh_evaluation_manifest.json": "658c14ab59c3d9a9392d948255399221b97912c0db4b93e0aa02fdbe05635239",
+    "seed_29/results/preprocessing_manifest.json": "b9c828d301b44d665460ee8cd6889d8cbbac1ef638f7636cbcafb8bb16cce97c",
+    "seed_29/results/tmp/baseline_validation_predictions.csv": "870b30208fe917aeb02a7ae5d12dc019bbe0a70986effaae93435ac9d32fdfa6",
+    "seed_31/configs/baseline_ridge.json": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+    "seed_31/configs/preprocessing.json": "f3c90e7ddb2ddbfbbf9fdee6419474592ca24a6baa0d132253c088e9598b1974",
+    "seed_31/data/processed/cell_line_assignments.csv": "86b577aec8dc293d512eadf8697e578302abad97ed08e90a5751ce17a6446970",
+    "seed_31/data/processed/drugs.csv": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+    "seed_31/data/processed/expression_features.csv": "c8fc2a2c021df99e4484457af6065b4f542c255d937a9f5233c8b6bba1d4ad3b",
+    "seed_31/data/processed/expression_pca128_scaled.npy": "bbd5c65afd3ab0f1b2f425ff5d1c9293031f10c25016f79f2e619880f043c9cd",
+    "seed_31/data/processed/expression_raw.npy": "aa6b165ab9f7f8c9d0d72fff297f27d61851cc8ceb711e17d618cecbb3c2505d",
+    "seed_31/data/processed/expression_transform.joblib": "219db41f662835dfa8f4f3945878fde480ba53b2d30299e68706d1e0aff086ba",
+    "seed_31/data/processed/morgan_radius2_2048.npy": "6a02b562369e655816a17d82e16d4e56630371118924d33bb782e20b0d5e2161",
+    "seed_31/data/processed/primary_responses.csv": "f3bb13ea9a21e1671c957e38e02fe372fc416be2bb517a2eca78faaf2859f698",
+    "seed_31/results/baseline_validation_manifest.json": "e80462c946e8f8a75cd47fb7fdbcb2a130d0b92e21086fe5c0b7bd42e685ea0d",
+    "seed_31/results/checkpoints/baseline_models.joblib": "f1c18db341c799e0a16b7510cec3a2c8f9bddd337c1431d4ee65fdf29a150f65",
+    "seed_31/results/fresh_evaluation_lock.json": "42f4c6dff5f53f3c170b9af938c2bbe599e9fd0c1bd8dbce3850d91a9a376097",
+    "seed_31/results/fresh_evaluation_manifest.json": "583e26974da5613c02dc2cea1bdaa2508101be46f89279d05a70cea000abf024",
+    "seed_31/results/preprocessing_manifest.json": "51df8be6df05e846a439c4c2bfc7b28cf4ac14271b6abc6e35d345b2333ba79c",
+    "seed_31/results/tmp/baseline_validation_predictions.csv": "204d0e054360263e06f1e3c96eac611e5cc3341e13710f08d66207ec0ee8c418",
+    "seed_37/configs/baseline_ridge.json": "4b7fa64966db5e78e7c1ab3ed39dbdfa57aa75824944fb1fe5379ac95f78de45",
+    "seed_37/configs/preprocessing.json": "fdd148837343e6e56c05cb7cf9ea4119209122e36eadc217546ab5e59921ccb5",
+    "seed_37/data/processed/cell_line_assignments.csv": "258e106e8da34d9e60c18d020509b32ab02ee05d35366e8469ad0919fb65e6d5",
+    "seed_37/data/processed/drugs.csv": "02121746a3fd989fbd7a3de7a402d311ada109199f159e09fed4a7b39e40498c",
+    "seed_37/data/processed/expression_features.csv": "c8fc2a2c021df99e4484457af6065b4f542c255d937a9f5233c8b6bba1d4ad3b",
+    "seed_37/data/processed/expression_pca128_scaled.npy": "eeaf49a66773656c9bd65590d3974e35a444ab7ee8c1c004a73386b952b7a647",
+    "seed_37/data/processed/expression_raw.npy": "aa6b165ab9f7f8c9d0d72fff297f27d61851cc8ceb711e17d618cecbb3c2505d",
+    "seed_37/data/processed/expression_transform.joblib": "4a20ff21afa6acd83189d2f7dc3f50ada3d3ef1a81560cf65fae15a81f5a8644",
+    "seed_37/data/processed/morgan_radius2_2048.npy": "6a02b562369e655816a17d82e16d4e56630371118924d33bb782e20b0d5e2161",
+    "seed_37/data/processed/primary_responses.csv": "d578f40c0ec305b6c860ac7ffe5a5a2492735d17f4d7050c2ffbb28e6714e8a5",
+    "seed_37/results/baseline_validation_manifest.json": "f76ff74d17fa33b4b9c41169ce1ec0d4d0e86ba9a2e37e08cc1b38246ff7e26d",
+    "seed_37/results/checkpoints/baseline_models.joblib": "c44df52f8f0dbdfb27085c8b6bd155129a214b3472864ace506fd5e9b3cd86b6",
+    "seed_37/results/fresh_evaluation_lock.json": "f12f5dfdab6db54674efb20ddc5fbbbb80c9476d0912dda8683c061a9906d646",
+    "seed_37/results/fresh_evaluation_manifest.json": "a1280f0344327ece437b2a507461cdb8e6e7bd45493fee52340fe6521a01c42a",
+    "seed_37/results/preprocessing_manifest.json": "e795930cff075d93d06378fc6b974699fc6053a8ce99cf9c42af9e78d6de3ed5",
+    "seed_37/results/tmp/baseline_validation_predictions.csv": "b25ceba838618d8f9f7935657637bb3ab8168449565b92897584db246b421701",
+    "study_manifest.json": "a550ab731cc7004ef1d2afc73d07e390c96767207a4f0ee8541860f55da61e13"
+  },
+  "interpretation": "Exploratory internal robustness on overlapping cell-line splits of an already public GDSC2 snapshot.",
+  "pca_components": [
+    64,
+    128,
+    256
+  ],
+  "schema_version": 1,
+  "source_sha256": {
+    "src/baselines.py": "ddb9ff372bf27c5c3cbcd7fe7541bc21043217515deb796d03682eb77c6ec4ed",
+    "src/evaluate_fresh.py": "d6cc24ce43204d62a287b43f4e66a40bbd202af15837c5b12cae370c6591af3e",
+    "src/preprocessing.py": "7a943d8826a853e0a2050314e9d64bde08b0664f68b2f49c57c6d46fad880fb2",
+    "src/run_pca_sensitivity.py": "09da8bc05c94c87476393de23d7be1e47ab50059741ba0b325252745952d4bf6"
+  },
+  "split_seeds": [
+    19,
+    23,
+    29,
+    31,
+    37
+  ],
+  "study_id": "gdsc2_grouped_split_and_pca_sensitivity_2026_09_24",
+  "test_status": "not_scored_by_pca_sensitivity_at_lock_creation",
+  "validation_selected_alpha": [
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 128,
+      "split_seed": 19
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 128,
+      "split_seed": 19
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 64,
+      "split_seed": 19
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 64,
+      "split_seed": 19
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 256,
+      "split_seed": 19
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 256,
+      "split_seed": 19
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 128,
+      "split_seed": 23
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 128,
+      "split_seed": 23
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 64,
+      "split_seed": 23
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 64,
+      "split_seed": 23
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 256,
+      "split_seed": 23
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 256,
+      "split_seed": 23
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 128,
+      "split_seed": 29
+    },
+    {
+      "alpha": 10.0,
+      "model": "per_drug_ridge",
+      "pca_components": 128,
+      "split_seed": 29
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 64,
+      "split_seed": 29
+    },
+    {
+      "alpha": 10.0,
+      "model": "per_drug_ridge",
+      "pca_components": 64,
+      "split_seed": 29
+    },
+    {
+      "alpha": 100.0,
+      "model": "pooled_ridge",
+      "pca_components": 256,
+      "split_seed": 29
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 256,
+      "split_seed": 29
+    },
+    {
+      "alpha": 10.0,
+      "model": "pooled_ridge",
+      "pca_components": 128,
+      "split_seed": 31
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 128,
+      "split_seed": 31
+    },
+    {
+      "alpha": 10.0,
+      "model": "pooled_ridge",
+      "pca_components": 64,
+      "split_seed": 31
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 64,
+      "split_seed": 31
+    },
+    {
+      "alpha": 0.01,
+      "model": "pooled_ridge",
+      "pca_components": 256,
+      "split_seed": 31
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 256,
+      "split_seed": 31
+    },
+    {
+      "alpha": 10.0,
+      "model": "pooled_ridge",
+      "pca_components": 128,
+      "split_seed": 37
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 128,
+      "split_seed": 37
+    },
+    {
+      "alpha": 0.01,
+      "model": "pooled_ridge",
+      "pca_components": 64,
+      "split_seed": 37
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 64,
+      "split_seed": 37
+    },
+    {
+      "alpha": 1.0,
+      "model": "pooled_ridge",
+      "pca_components": 256,
+      "split_seed": 37
+    },
+    {
+      "alpha": 100.0,
+      "model": "per_drug_ridge",
+      "pca_components": 256,
+      "split_seed": 37
+    }
+  ]
+}
