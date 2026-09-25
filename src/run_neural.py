@@ -33,7 +33,7 @@ from baselines import by_drug_validation, errors
 from neural import DrugResponseMLP, assemble_features, predict_rows
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(os.environ.get("DRP_RUN_ROOT", Path(__file__).resolve().parents[1])).resolve()
 OUT = ROOT / "data" / "processed"
 RESULTS = ROOT / "results"
 CHECKPOINTS = RESULTS / "checkpoints"
@@ -109,8 +109,9 @@ def load_primary(config: dict) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame
         raise ValueError("Frozen split alignment failed")
     train = use.loc[use["split"] == "train"].reset_index(drop=True)
     validation = use.loc[use["split"] == "validation"].reset_index(drop=True)
-    if len(train) != 63946 or len(validation) != 13661:
-        raise ValueError("Frozen train/validation row counts changed")
+    expected_counts = prep_manifest["counts"]["primary_rows_by_split"]
+    if len(train) != expected_counts["train"] or len(validation) != expected_counts["validation"]:
+        raise ValueError("Prepared train/validation row counts changed")
     if not np.isfinite(train["y"].to_numpy()).all() or not np.isfinite(validation["y"].to_numpy()).all():
         raise ValueError("Nonfinite training/validation target")
     return train, validation, drugs, scores, fingerprints, baseline_manifest

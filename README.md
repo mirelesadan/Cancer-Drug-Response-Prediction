@@ -60,6 +60,18 @@ The optional GNN requires the additional [PyTorch Geometric environment recipe](
 
 **Reproduction boundary:** `configs/final_evaluation.json` is a locked record of the original run and checks exact input, manifest, and checkpoint hashes. A newly trained MLP or regenerated manifest may have different bytes, so the final sensitivity/evaluation scripts can intentionally reject a fresh run even when its method is the same. The published aggregate results document the original locked evaluation; exact replay requires its locally retained, Git-ignored artifacts. Do not treat the frozen lock as a portable promise of byte-identical GPU retraining.
 
+### Independent fresh run
+
+[`src/run_fresh.py`](src/run_fresh.py) runs the **primary** preparation, baseline validation, optional fixed six-run MLP validation, and held-out evaluation in a *new* directory. It checks the input SHA-256 values before loading the TDC pickle, copies the fixed configurations, and writes a **run-specific evaluation lock after validation and before test scoring**. It does not read or alter the published checkpoints or results. First retrieve the TDC-identified inputs as described in [data/README.md](data/README.md). With the complete environment above, run from the repository root:
+
+```powershell
+& ".venv\Scripts\python.exe" "src\run_fresh.py" --input-dir "data\raw" --run-dir "data\fresh_runs\primary-01" --models primary
+```
+
+Choose a directory name that does not exist yet; each run gets its own ignored tables, models, predictions, lock, and `results/fresh_test_comparison.csv`. The default uses 2,000 paired cell-line bootstrap draws. `--models baselines` runs only the per-drug mean and the two Ridge models, and does not require PyTorch. The [synthetic CPU CI workflow](.github/workflows/synthetic-cpu.yml) exercises this baseline route on invented data, including the split, train-only transforms, validation selection, test evaluation, and saved-prediction replay. Its scores are pipeline diagnostics, not GDSC2 findings. The full MLP route is tested locally and requires PyTorch; select the wheel appropriate to your machine using the [official installation guidance](https://pytorch.org/get-started/locally/).
+
+The fresh runner covers the original **primary** known-drug question. It deliberately does not rerun the historical Uprosertib sensitivity experiment or the later GNN extension. Its test results are a methodological check on a known, previously published study; the original test outcomes are already public, so a fresh run on the same snapshot is not independent scientific confirmation. Report any new run separately from the [original locked results](results/final_evaluation.md).
+
 ## Limitations
 
 The study uses one cell-line split and only drugs seen during training. The response is the provided `Y` scale: TDC calls it log-normalized IC50, and Sanger describes upstream `LN_IC50` as a natural logarithm, but the exact snapshot-to-source mapping and concentration reference remain unresolved. The 128-component PCA retains **65.303%** of standardized training-expression variance, so discarded dimensions could contain predictive signal. Uprosertib's conflicting entries lack source identifiers; excluding them defines the primary analysis, while averaging them in the sensitivity table is an analytical assumption. These cell-line results are not clinical predictions.

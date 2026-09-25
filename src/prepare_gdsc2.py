@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import platform
 
@@ -24,8 +25,8 @@ import sklearn
 from preprocessing import assign_cell_lines, feature_catalog, fit_expression_transform, morgan_bit_matrix
 
 
-ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / "data" / "raw"
+ROOT = Path(os.environ.get("DRP_RUN_ROOT", Path(__file__).resolve().parents[1])).resolve()
+RAW = Path(os.environ.get("DRP_RAW_DIR", ROOT / "data" / "raw")).resolve()
 OUT = ROOT / "data" / "processed"
 CONFIG = ROOT / "configs" / "preprocessing.json"
 MANIFEST = ROOT / "results" / "preprocessing_manifest.json"

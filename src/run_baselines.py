@@ -27,7 +27,7 @@ from baselines import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(os.environ.get("DRP_RUN_ROOT", Path(__file__).resolve().parents[1])).resolve()
 PROCESSED = ROOT / "data" / "processed"
 RESULTS = ROOT / "results"
 CHECKPOINTS = RESULTS / "checkpoints"
