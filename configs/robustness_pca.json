@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "study_id": "gdsc2_grouped_split_and_pca_sensitivity_2026_09_24",
+  "status": "prespecified_before_new_model_fits",
+  "question": "How stable are known-drug predictions across additional disjoint cell-line assignments and PCA dimensions?",
+  "input_sha256": {
+    "gdsc2.pkl": "0d09b9d69cc714fd2b4a31e2b1f602c09ed82c282533683c5fc734ceb226f9e5",
+    "gdsc_gene_symbols.tab": "5712acc83f8be3b03345cbd56f5ae3289582ef08caf6991b92eca1728eb73296"
+  },
+  "primary_response_sha256": "60d482a7b5d80c67d4869443896a7724fc03bf3614a51b632ff5d02e5cf7b357",
+  "split": {
+    "seed_rule": "first_five_prime_numbers_after_original_seed_17",
+    "seeds": [19, 23, 29, 31, 37],
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15,
+    "identity_unit": "unique_cell_line_id",
+    "training_drug_coverage": "assert_for_each_seed; report_failure_without_reseeding",
+    "original_seed_17": "historical_reference_only; exclude_from_five_split_summary"
+  },
+  "fixed_models": {
+    "data_table": "primary_non_Uprosertib",
+    "target_transform": "none",
+    "fingerprint": "Morgan_radius_2_2048_binary",
+    "expression_pca_components": 128,
+    "baseline_and_ridge": "existing_configs/baseline_ridge.json",
+    "mlp": "existing_configs/neural_mlp.json; two_learning_rates_by_three_training_seeds_per_split",
+    "selection": "per_split_validation_only; no_train_plus_validation_refit",
+    "comparison": ["per_drug_mean", "pooled_ridge", "per_drug_ridge", "mlp_three_seed_metric_mean"]
+  },
+  "pca_sensitivity": {
+    "components": [64, 128, 256],
+    "splits": "same_five_prespecified_split_seeds",
+    "other_expression_preprocessing": "reuse_each_split_training_fitted_variance_filter_and_gene_scaler",
+    "pca_solver": "randomized",
+    "pca_random_state": 17,
+    "pca_n_oversamples": 10,
+    "pca_iterated_power": 3,
+    "pca_power_iteration_normalizer": "QR",
+    "score_scaler_fit_unit": "unique_training_cell_line",
+    "models": ["pooled_ridge", "per_drug_ridge"],
+    "reference": "saved_128_component_models_in_each_fresh_run",
+    "alpha_grid": [0.01, 0.1, 1, 10, 100, 1000, 10000],
+    "alpha_selection": "lowest_overall_validation_RMSE_separately_for_each_model_dimension_split",
+    "test_protocol": "lock_all_dimension_models_and_selections_before_scoring_test; report_all_dimensions; no_test_based_selection"
+  },
+  "bootstrap": {
+    "per_split_resamples": 2000,
+    "seed": 2026,
+    "unit": "whole_cell_line",
+    "comparison_draws": "paired_across_models_within_each_split"
+  },
+  "reporting": {
+    "primary_metric": "response_weighted_RMSE",
+    "supporting_metrics": ["MAE", "equal_drug_mean_RMSE", "median_defined_within_drug_Spearman", "eligible_and_defined_drug_counts"],
+    "paired_differences": ["pooled_ridge_minus_per_drug_ridge", "mlp_three_seed_mean_minus_per_drug_ridge", "per_drug_mean_minus_per_drug_ridge", "PCA_64_minus_128", "PCA_256_minus_128"],
+    "across_split_summary": "median_min_max_and_win_counts; no_p_value_or_independence_CI",
+    "inference_limit": "overlapping_splits_of_same_public_GDSC2_snapshot_are_exploratory_internal_robustness_not_independent_confirmation"
+  }
+}
